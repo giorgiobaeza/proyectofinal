@@ -10,5 +10,5 @@ public class InicioControlador {
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	public String inicio() {
 		return "inicio";
-	}
+	} 
 }
