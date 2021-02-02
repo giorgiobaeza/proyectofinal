@@ -31,7 +31,7 @@
                 <!--<li><a href="loginServlet">Ingreso</a></li>-->
                 <!--<li><a href="FormCrearUsuarioServlet">Crear Usuario</a></li>-->
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/crearCapacitacion'>Crear Capacitaciones</a></li>
-                <!--<li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>Listado de Usuarios</a></li>-->
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>Listado de Usuarios</a></li>
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarCapacitaciones'>Listar Capacitaciones</a></li>
                 <!--<li><a href="administrarasistentes.html">Asistentes Capacitaciones</a></li>
                 <li><a href="listadovisitas.html">Listado Visitas</a></li>
@@ -49,12 +49,12 @@
                 
                 <th>Nombre</th>
                 <th>Apellidos</th>
-                <th>Tipo de Usuario</th>
+                <th>Fecha de nacimiento</th>
                 <th>RUN</th>
                 <th>Tipo de Usuario</th>
                 <th></th>
             </tr>
-            <c:forEach items="${Usuarios}" var="lu">
+            <c:forEach items="${lusuarios}" var="lu">
             <tr>
                 <td><c:out value="${lu.getNombre()}" /></td>
                 <td><c:out value="${lu.getApellido()}" /></td>
@@ -75,6 +75,10 @@
 			</td>
 			</tr>
 			</c:forEach>
+			<tr>
+				<td><a href='<c:out value="${pageContext.request.contextPath}"/>/crearUsuario'>
+					<input type="button" value="Crear Usuario"></a></td>
+			</tr>
         </table>
 
     </fieldset>
