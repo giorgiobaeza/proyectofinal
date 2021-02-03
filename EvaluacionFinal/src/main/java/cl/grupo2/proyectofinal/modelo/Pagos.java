@@ -13,7 +13,7 @@ public class Pagos {
 	private String mes;
 	private String anio;
 	private int cliente_rutcliente;
-	
+	 
 
 
 	public int getIdPagos() {
