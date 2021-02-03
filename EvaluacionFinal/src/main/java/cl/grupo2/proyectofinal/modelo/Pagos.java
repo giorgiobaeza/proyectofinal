@@ -11,7 +11,7 @@ public class Pagos {
 	private String fechaPago;
 	private int monto;
 	private String mes;
-	private String año;
+	private String aÃ±o;
 	private int cliente_rutcliente;
 	
 
@@ -48,12 +48,12 @@ public class Pagos {
 		this.mes = mes;
 	}
 
-	public String getAño() {
-		return año;
+	public String getAÃ±o() {
+		return aÃ±o;
 	}
 
-	public void setAño(String año) {
-		this.año = año;
+	public void setAÃ±o(String aÃ±o) {
+		this.aÃ±o = aÃ±o;
 	}
 
 	public int getCliente_rutcliente() {
@@ -66,21 +66,21 @@ public class Pagos {
 
 	@Override
 	public String toString() {
-		return "Pagos [idPagos=" + idPagos + ", fechaPago=" + fechaPago + ", monto=" + monto + ", mes=" + mes + ", año="
-				+ año + ", cliente_rutcliente=" + cliente_rutcliente + "]";
+		return "Pagos [idPagos=" + idPagos + ", fechaPago=" + fechaPago + ", monto=" + monto + ", mes=" + mes + ", aï¿½o="
+				+ aÃ±o + ", cliente_rutcliente=" + cliente_rutcliente + "]";
 	}
 
 	public Pagos() {
 		super();
 	}
 
-	public Pagos(int idPagos, String fechaPago, int monto, String mes, String año, int cliente_rutcliente) {
+	public Pagos(int idPagos, String fechaPago, int monto, String mes, String aÃ±o, int cliente_rutcliente) {
 		super();
 		this.idPagos = idPagos;
 		this.fechaPago = fechaPago;
 		this.monto = monto;
 		this.mes = mes;
-		this.año = año;
+		this.aÃ±o = aÃ±o;
 		this.cliente_rutcliente = cliente_rutcliente;
 	}
 
