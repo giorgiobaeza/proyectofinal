@@ -8,6 +8,6 @@ public interface UsuarioServicio {
 	
 	
 	public List<Usuario> obtenerUsuario();
-	public boolean crearUsuario();
+	public boolean crearUsuario(Usuario usr);
 
 }
