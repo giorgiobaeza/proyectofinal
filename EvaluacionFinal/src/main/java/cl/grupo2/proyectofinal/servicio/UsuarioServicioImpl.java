@@ -20,8 +20,10 @@ public class UsuarioServicioImpl implements UsuarioServicio{
 	}
 
 	@Override
-	public boolean crearUsuario() {
-		// TODO Auto-generated method stub
+	public boolean crearUsuario(Usuario usr) {
+		ur.save(usr);
 		return false;
 	}
+
+	
 }
