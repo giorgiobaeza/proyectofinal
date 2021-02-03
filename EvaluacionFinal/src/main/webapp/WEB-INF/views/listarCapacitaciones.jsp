@@ -30,7 +30,7 @@
                 <!--<li><a href="loginServlet">Ingreso</a></li>-->
                 <!--<li><a href="FormCrearUsuarioServlet">Crear Usuario</a></li>-->
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/crearCapacitacion'>Crear Capacitaciones</a></li>
-                <!--<li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>Listado de Usuarios</a></li>-->
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>Listado de Usuarios</a></li>
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarCapacitaciones'>Listar Capacitaciones</a></li>
                 <!--<li><a href="administrarasistentes.html">Asistentes Capacitaciones</a></li>
                 <li><a href="listadovisitas.html">Listado Visitas</a></li>
