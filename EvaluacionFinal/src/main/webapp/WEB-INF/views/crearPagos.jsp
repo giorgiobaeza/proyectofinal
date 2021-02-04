@@ -49,28 +49,28 @@
             <table class="cel- tablas-t tablas-e">
                 <tr>
                 	<td>Id Pagos</td>
-                	<td><input type="text" name="idPagos" id="idpag"/></td>
+                	<td><input type="text" name="txtidPagos" id="idpag"/></td>
                 </tr>
                 <tr>
                     <td>Fecha de Pago</td>
-                    <td><input type="date" name="pagfecha" id="pagfecha"/></td>
+                    <td><input type="date" name="txtfechaPago" id="pagfecha"/></td>
                 </tr>
                 <tr>
                     <td>Monto Pago</td>
-                    <td><input type="time" name="pagmonto" id="pagmonto"/></td>
+                    <td><input type="time" name="txtMonto" id="pagmonto"/></td>
                 </tr>
                 <tr>
                     <td>Mes</td>
-                    <td><input type="text" name="pagmes" id="pagmes"/></td>
+                    <td><input type="text" name="txtMes" id="pagmes"/></td>
                 </tr>
                 <tr>
                     <td>Año</td>
-                    <td><input type="text" name="pagaño" id="pagaño" /></td>
+                    <td><input type="text" name="txtAnio" id="pagaño" /></td>
                 </tr>
 				<tr>
 				<tr>
                     <td>Rut Cliente</td>
-                    <td><input type="text" name="cliente_rutcliente" id="pagcliente_rutcliente" /></td>
+                    <td><input type="text" name="txtClienterutcliente" id="pagcliente_rutcliente" /></td>
                 </tr>
 				<tr>
 					<td><input type="submit" value="Ingresar Pago"></td>
