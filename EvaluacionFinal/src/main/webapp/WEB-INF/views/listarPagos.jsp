@@ -57,8 +57,8 @@
 	            <c:forEach items="${lPagos}" var="lp">
 				<tr>
 					<td><c:out value="${lp.getIdPagos()}" /></td>
-					<td><c:out value="${lp.FechaPago()}" /></td>
-					<td><c:out value="${lp.Monto()}" /></td>
+					<td><c:out value="${lp.getFechaPago()}" /></td>
+					<td><c:out value="${lp.getMonto()}" /></td>
 					<td><c:out value="${lp.getMes()}" /></td>
 					<td><c:out value="${lp.getAnio()}" /></td>
 					<td><c:out value="${lp.getCliente_rutcliente()}" /></td>
