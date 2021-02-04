@@ -64,11 +64,9 @@
             
             <td>
             <c:if test="${lu.getTipoUsuario()=='cliente' }">
-				<td>
 					<a href='<c:out value="${pageContext.request.contextPath}"/>/editarCliente/<c:out value="${lu.getRun()}"/>'>
 						<button>Editar</button>
-					</a>
-				</td>				
+					</a>							
 			</c:if>	
 			<c:if test="${lu.getTipoUsuario()=='administrativo' }">
 					<a href='<c:out value="${pageContext.request.contextPath}"/>/editarAdministrativo/<c:out value="${lu.getRun()}"/>'>

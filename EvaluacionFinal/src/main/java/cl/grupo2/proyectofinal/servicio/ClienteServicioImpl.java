@@ -24,19 +24,19 @@ public class ClienteServicioImpl implements ClienteServicio{
 	@Override
 	public boolean crearCliente(Cliente cli) {
 		cl.save(cli);
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean eliminarCliente(Cliente cli) {
 		cl.delete(cli);
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean editarCliente(Cliente cli) {
 		cl.save(cli);
-		return false;
+		return true;
 	}
 
 	@Override

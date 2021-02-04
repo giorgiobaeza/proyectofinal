@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +12,7 @@
 
 <body>
 	<header id="seccion">
-        <h2> LISTADO DE PAGOS</h2>
+        <h2>Listado de Pagos</h2>
         <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/cerrarsesion'>Cerrar Sesión</a></blockquote>
         <div class="content-menu">
         <input type="checkbox" id="check">
@@ -55,12 +56,12 @@
 	            </tr>
 	            <c:forEach items="${lPagos}" var="lp">
 				<tr>
-					<td><c:out value="${lc.getIdPagos()}" /></td>
-					<td><c:out value="${lc.FechaPago()}" /></td>
-					<td><c:out value="${lc.Monto()}" /></td>
-					<td><c:out value="${lc.getMes()}" /></td>
-					<td><c:out value="${lc.getAnio()}" /></td>
-					<td><c:out value="${lc.getCliente_rutcliente()}" /></td>
+					<td><c:out value="${lp.getIdPagos()}" /></td>
+					<td><c:out value="${lp.FechaPago()}" /></td>
+					<td><c:out value="${lp.Monto()}" /></td>
+					<td><c:out value="${lp.getMes()}" /></td>
+					<td><c:out value="${lp.getAnio()}" /></td>
+					<td><c:out value="${lp.getCliente_rutcliente()}" /></td>
 				</tr>
 				</c:forEach>
 				<tr>

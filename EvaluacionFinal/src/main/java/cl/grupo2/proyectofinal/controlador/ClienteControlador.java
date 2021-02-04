@@ -25,7 +25,7 @@ public class ClienteControlador {
 		return "editarCliente";
 	}	
 	
-	@RequestMapping(value="/procesarEditar", method = RequestMethod.POST)
+	@RequestMapping(value="/procesarEditarCliente", method = RequestMethod.POST)
 	public String editarClientesProcesar(Model model, 
 		@RequestParam ("txtrutCliente") int rutCliente,
 		@RequestParam ("txtcliNombres") String cliNombres,

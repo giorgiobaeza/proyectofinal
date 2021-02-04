@@ -46,7 +46,7 @@
         </div>
     </header>
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/procesarEditar' class="cmxform" id="capForm">
+        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/procesarEditarCliente' class="cmxform" id="capForm">
             <table class="cel- tablas-t tablas-e">
                 <tr>
                 	<td>Rut Cliente</td>

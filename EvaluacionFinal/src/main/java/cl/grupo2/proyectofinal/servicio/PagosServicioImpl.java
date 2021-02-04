@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import cl.grupo2.proyectofinal.modelo.Pagos;
 import cl.grupo2.proyectofinal.modelo.PagosRepositorio;
+import cl.grupo2.proyectofinal.modelo.Profesional;
 
 @Service
 public class PagosServicioImpl implements PagosServicio {
@@ -15,8 +16,7 @@ public class PagosServicioImpl implements PagosServicio {
 
 	@Override
 	public List<Pagos> obtenerPagos() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Pagos>) ca.findAll();
 	}
 
 	@Override

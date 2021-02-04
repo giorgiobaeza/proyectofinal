@@ -16,11 +16,11 @@ import cl.grupo2.proyectofinal.servicio.PagosServicio;
 public class PagosControlador {
 
 @Autowired
-PagosServicio cs;
+PagosServicio ps;
 
 @RequestMapping(value="/listarPagos", method = RequestMethod.GET)
 public String obtenerPagos(Model model) {
-	List<Pagos> listaPagos = cs.obtenerPagos();
+	List<Pagos> listaPagos = ps.obtenerPagos();
 	model.addAttribute("lPagos", listaPagos);
 	return "listarPagos";
 }
@@ -41,7 +41,7 @@ public String crearPagoses(Model model,
 	
 	Pagos pag = new Pagos(idPagos, fechaPago, monto,
 			mes, anio, cliente_rutcliente);
-	boolean result = cs.crearPagos(pag);
+	boolean result = ps.crearPagos(pag);
 	String titulo ="Crear Pagos";
 	model.addAttribute("msgtitulo", titulo);		
 	String mensaje ="";
