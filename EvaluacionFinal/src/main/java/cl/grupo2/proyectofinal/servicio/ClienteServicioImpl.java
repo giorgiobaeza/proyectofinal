@@ -40,8 +40,8 @@ public class ClienteServicioImpl implements ClienteServicio{
 	}
 
 	@Override
-	public Cliente obtenerClientePorId(int idcli) {
-		return cl.findOne(idcli);
+	public Cliente obtenerClientePorId(int usuario_run) {
+		return cl.findOne(usuario_run);
 	}
 
 }

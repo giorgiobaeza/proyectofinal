@@ -31,24 +31,28 @@ public class UsuarioControlador {
 	}
 
 	@RequestMapping(value="/crearUsuarioProcesar", method = RequestMethod.POST)
-	public String crearUsuarioes(Model model,
+	public String crearUsuarios(Model model,
 		@RequestParam ("usnombre") String nombre,
 		@RequestParam ("usapellido") String apellido,
 		@RequestParam ("usfecha") String fechanacimiento,
 		@RequestParam ("usrun") int run,
 		@RequestParam ("tipousuario") String tipousuario ) {
 		
-		Usuario usr = new Usuario(nombre,apellido,fechanacimiento,run,tipousuario);
+		Usuario usr = new Usuario(nombre, apellido, fechanacimiento, run, tipousuario);
 		boolean result = us.crearUsuario(usr);
+		String titulo ="Crear Usuario";
 		String mensaje ="";
-		
+		model.addAttribute("msgtitulo", titulo);
+
 		if (result) {
-			mensaje = "Usuario Creada";
+			mensaje = "Usuario Creado";
 		}
 		else {
-			mensaje = "Problema al crear la Usuario";
+			mensaje = "Problema al crear el Usuario";
 		}
-		model.addAttribute("msgcrear", mensaje);		
-		return "msgcrearUsuario";
+		model.addAttribute("msgmensaje", mensaje);		
+		String direccion = "/listarUsuarios";
+		model.addAttribute("msgdireccion", direccion);
+		return "msgcrear";
 	}
 }

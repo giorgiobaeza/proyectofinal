@@ -6,7 +6,7 @@ import javax.persistence.Id;
 @Entity
 public class Cliente {
 	
-	@Id
+	
 	private int rutCliente;
 	private String cliNombres;
 	private String cliApellidos;
@@ -16,6 +16,7 @@ public class Cliente {
 	private String cliDireccion;
 	private String cliComuna;
 	private int cliEdad;
+	@Id
 	private int usuario_run;
 	
 	public int getRutCliente() {

@@ -64,13 +64,21 @@
             
             <td>
             <c:if test="${lu.getTipoUsuario()=='cliente' }">
-				<td><input type="button" value="Modificar" name="modif" onclick="location.href='EditarClienteServlet?run=<c:out value='${lu.getRun()}' />'"></td>				
+				<td>
+					<a href='<c:out value="${pageContext.request.contextPath}"/>/editarCliente/<c:out value="${lu.getRun()}"/>'>
+						<button>Editar</button>
+					</a>
+				</td>				
 			</c:if>	
 			<c:if test="${lu.getTipoUsuario()=='administrativo' }">
-				<td><input type="button" value="Modificar" name="modif" onclick="location.href='EditarAdministrativoServlet?run=<c:out value='${lu.getRun()}'/>'"></td>				
+					<a href='<c:out value="${pageContext.request.contextPath}"/>/editarAdministrativo/<c:out value="${lu.getRun()}"/>'>
+						<button>Editar</button>
+					</a>			
 			</c:if>	
 			<c:if test="${lu.getTipoUsuario()=='profesional' }">
-				<td><input type="button" value="Modificar" name="modif" onclick="location.href='EditarProfesionalServlet?run=<c:out value='${lu.getRun()}'/>'"></td>				
+					<a href='<c:out value="${pageContext.request.contextPath}"/>/editarProfesional/<c:out value="${lu.getRun()}"/>'>
+						<button>Editar</button>
+					</a>			
 			</c:if>
 			</td>
 			</tr>

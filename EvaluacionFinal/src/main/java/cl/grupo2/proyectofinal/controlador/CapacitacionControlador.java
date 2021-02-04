@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import cl.grupo2.proyectofinal.modelo.Capacitacion;
 import cl.grupo2.proyectofinal.servicio.CapacitacionServicio;
 
-
 @Controller
 public class CapacitacionControlador {
 	
@@ -43,16 +42,20 @@ public class CapacitacionControlador {
 		Capacitacion cap = new Capacitacion(idCapacitacion, capFecha, capHora,
 				capLugar, capDuracion, cliente_RutCliente);
 		boolean result = cs.crearCapacitacion(cap);
+		String titulo ="Crear Capacitacion";
+		model.addAttribute("msgtitulo", titulo);		
 		String mensaje ="";
-		
+
 		if (result) {
 			mensaje = "Capacitacion Creada";
 		}
 		else {
 			mensaje = "Problema al crear la Capacitacion";
 		}
-		model.addAttribute("msgcrear", mensaje);		
-		return "msgcrearCapacitacion";
+		model.addAttribute("msgmensaje", mensaje);
+		String direccion = "/listarCapacitaciones";
+		model.addAttribute("msgdireccion", direccion);
+		return "msgcrear";
 	}
 	
 	

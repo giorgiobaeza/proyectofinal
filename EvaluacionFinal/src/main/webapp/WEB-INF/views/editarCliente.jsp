@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Crear Usuario</title>
+<title>Editar Cliente</title>
 	<link href='<c:out value="${pageContext.request.contextPath}"/>/resources/css/estilo.css' rel="stylesheet">
     <script type="text/javascript" src='<c:out value="${pageContext.request.contextPath}">/resources/js/script.js</c:out>'></script>   
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
 		<header id="seccion">
-        <h2> crear Usuario</h2>
+        <h2>Editar Cliente</h2>
         <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/cerrarsesion'>Cerrar Sesión</a></blockquote>
         <div class="content-menu">
         <input type="checkbox" id="check">
@@ -46,38 +46,50 @@
         </div>
     </header>
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="post" action="crearUsuarioProcesar" class="cmxform" id="capForm">
+        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/procesarEditar' class="cmxform" id="capForm">
             <table class="cel- tablas-t tablas-e">
                 <tr>
-                	<td>Nombre</td>
-                	<td><input type="text" name="usnombre" id="usnombre"/></td>
+                	<td>Rut Cliente</td>
+                	<td><input type="text" name="txtrutCliente" value='<c:out value="${cli.getRutCliente()}"/>' readonly="readonly"/></td>
                 </tr>
                 <tr>
-                    <td>Apellido</td>
-                    <td><input type="text" name="usapellido" id="usapellido"/></td>
+                    <td>Nombres</td>
+                    <td><input type="text" name="txtcliNombres" value='<c:out value="${cli.getCliNombres()}"/>'/></td>
                 </tr>
                 <tr>
-                    <td>Fecha de Nacimiento</td>
-                    <td><input type="text" name="usfecha" id="usfecha"/></td>
+                    <td>Apellidos</td>
+                    <td><input type="text" name="txtcliApellidos" value='<c:out value="${cli.getCliApellidos()}"/>'/></td>
                 </tr>
                 <tr>
-                    <td>R.U.N.</td>
-                    <td><input type="text" name="usrun" id="usrun"/></td>
+                    <td>Telefono</td>
+                    <td><input type="text" name="txtcliTelefono" value='<c:out value="${cli.getCliTelefono()}"/>'/></td>
                 </tr>
                 <tr>
-                    <td>Tipo de Usuario</td>
-                    <td>
-                    	<select name="tipousuario">
-                    		<option>seleccione una opción</option>
-                    		<option value="cliente">Cliente</option>
-                    		<option value="profesional">Profesional</option>
-                    		<option value="administrativo">Administrativo</option>
-                    	</select>
-                    </td>
+                    <td>AFP</td>
+                    <td><input type="text" name="txtcliAfp" value='<c:out value="${cli.getCliAfp()}"/>'/></td>
                 </tr>
 				<tr>
+                    <td>Sistema de Salud</td>
+                    <td><input type="text" name="txtcliSistemaSalud" value='<c:out value="${cli.getCliSistemaSalud()}"/>'/></td>
+                </tr>
 				<tr>
-					<td><input type="submit" value="Ingresar Usuario"></td>
+                    <td>Direccion</td>
+                    <td><input type="text" name="txtcliDireccion" value='<c:out value="${cli.getCliDireccion()}"/>'/></td>
+                </tr>
+                <tr>
+                    <td>Comuna</td>
+                    <td><input type="text" name="txtcliComuna" value='<c:out value="${cli.getCliComuna()}"/>'/></td>
+                </tr>
+                <tr>
+                    <td>Edad</td>
+                    <td><input type="text" name="txtcliEdad" value='<c:out value="${cli.getCliEdad()}"/>'/></td>
+                </tr>
+                <tr>
+                    <td>Run Usuario</td>
+                    <td><input type="text" name="txtusuariorun" value='<c:out value="${cli.getUsuario_run()}"/>' readonly="readonly"/></td>
+                </tr>
+                <tr>
+					<td><input type="submit" value="Ingresar Cliente"></td>
 				</tr>
                 </table>
         </form>
