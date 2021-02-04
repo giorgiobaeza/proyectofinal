@@ -4,21 +4,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Listado de Pagos</title>
+	<title>Listado de Pagos</title>
 	<link href='<c:out value="${pageContext.request.contextPath}"/>/resources/css/estilo.css' rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src='<c:out value="${pageContext.request.contextPath}">/resources/js/script.js</c:out>'></script>   
-</head>
+
 <body>
-	
-    <header id="seccion">
-        <h2> Listado de Pagos</h2>
-        <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/logout'>Cerrar Sesión</a></blockquote>
+	<header id="seccion">
+        <h2> LISTADO DE PAGOS</h2>
+        <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/cerrarsesion'>Cerrar Sesión</a></blockquote>
         <div class="content-menu">
         <input type="checkbox" id="check">
-			<label class="icon-menu" for="check">
+        	<label class="icon-menu" for="check">
 	        	<img src='<c:out value="${pageContext.request.contextPath}"/>/resources/img/icono-menu.png' alt="" class="icon-menu">
-	       	</label>
+	       	</label>		
+	    <!--  <p>Bienvenido usuario: <c:out value="${nombresesion}"></c:out></p>
+		<a href="./LogoutServlet">
+		cerrar sesión
+		</a>-->
         <nav class="menu">
             <ul>
             	<li><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Inicio</a></li>
@@ -33,18 +36,42 @@
                 <li><a href="listadopago.html">Listado Pago</a></li>
                 <li><a href="listadoasesorias.html">Listado Asesorías</a></li>
                 <li><a href="listadoaccidentes.html">Listado Accidentes</a></li>-->
-                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarPagos'>Lista de pagos</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarClientes'>Lista de clientes</a></li>
             </ul>
         </nav>
-        </div>
+                </div>
     </header>
+
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form action='<c:out value="${pageContext.request.contextPath}"/>/clilist'>
-			<p><input type="submit" value="obtener lista de clientes"></p>        	
+        <form action='<c:out value="${pageContext.request.contextPath}"/>/crearPagos'>
+	        <table class="cel- tablaadm-t tablaadm-e">
+	            <tr class="negrita">
+	            	<th>Id Pagos</th>
+	            	<th>Fecha</th>
+	            	<th>Monto</th>
+	            	<th>Mes</th>
+	            	<th>Año</th>
+	            	<th>Rut Cliente</th>
+	            </tr>
+	            <c:forEach items="${lPagos}" var="lp">
+				<tr>
+					<td><c:out value="${lc.getIdPagos()}" /></td>
+					<td><c:out value="${lc.FechaPago()}" /></td>
+					<td><c:out value="${lc.Monto()}" /></td>
+					<td><c:out value="${lc.getMes()}" /></td>
+					<td><c:out value="${lc.getAnio()}" /></td>
+					<td><c:out value="${lc.getCliente_rutcliente()}" /></td>
+				</tr>
+				</c:forEach>
+				<tr>
+					<td><a href='<c:out value="${pageContext.request.contextPath}"/>/crearPagos'>
+					<input type="button" value="Crear Pagos"></a></td>
+				</tr>
+	        </table>
         </form>
     </fieldset>
     <footer id="pie">
-        <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Volver a la página de Inicio</a></blockquote>
+        <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Volver a Inicio</a></blockquote>
         Derechos Reservados G3 &copy; 2020
       </footer>
 </body>
