@@ -32,12 +32,12 @@ public String crearPagos(Model model) {
 
 @RequestMapping(value="/crearPagosProcesar", method = RequestMethod.POST)
 public String crearPagoses(Model model,
-	@RequestParam ("idPagos") int idPagos,
-	@RequestParam ("capfecha") String fechaPago,
-	@RequestParam ("caphora") int monto,
-	@RequestParam ("caplugar") String mes,
-	@RequestParam ("capduracion") String anio,
-	@RequestParam ("cliente_rutcliente") int cliente_rutcliente ) {
+	@RequestParam ("txtidPagos") int idPagos,
+	@RequestParam ("txtfechaPago") String fechaPago,
+	@RequestParam ("txtMonto") int monto,
+	@RequestParam ("txtMes") String mes,
+	@RequestParam ("txtAnio") String anio,
+	@RequestParam ("txtCliente_rutcliente") int cliente_rutcliente ) {
 	
 	Pagos pag = new Pagos(idPagos, fechaPago, monto,
 			mes, anio, cliente_rutcliente);
@@ -58,6 +58,4 @@ public String crearPagoses(Model model,
 	return "msgcrear";
 }
 
-
-	
 }

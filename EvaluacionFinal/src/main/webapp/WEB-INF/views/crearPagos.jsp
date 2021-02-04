@@ -14,7 +14,7 @@
 </head>
 <body>
 		<header id="seccion">
-        <h2> CREAR PAGOS</h2>
+        <h2> Crear Pagos</h2>
         <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/cerrarsesion'>Cerrar Sesión</a></blockquote>
         <div class="content-menu">
         <input type="checkbox" id="check">
@@ -49,7 +49,7 @@
             <table class="cel- tablas-t tablas-e">
                 <tr>
                 	<td>Id Pagos</td>
-                	<td><input type="text" name="idpagos" id="idpag"/></td>
+                	<td><input type="text" name="idPagos" id="idpag"/></td>
                 </tr>
                 <tr>
                     <td>Fecha de Pago</td>
