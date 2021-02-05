@@ -1,11 +1,15 @@
 package cl.grupo2.proyectofinal.modelo;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class DetalleChequeo {
+	
 	private String cumple_observaciones;
+	
 	private int visita_idvisita;
+	@Id
 	private int chequeo_idchequeo;
 	
 	@Override

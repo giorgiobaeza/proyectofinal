@@ -17,10 +17,10 @@ public class DetalleChequeoControlador {
 	@Autowired
 	DetalleChequeoServicio ds;
 	
-	@Autowired
+	//@Autowired
 	//*VisitaServicio vs;
 	
-	@RequestMapping(value="/ListarDetalleChequeo", method = RequestMethod.GET)
+	@RequestMapping(value="/listarDetalleChequeo", method = RequestMethod.GET)
 	public String obtenerChequeo(Model model) {
 		List<DetalleChequeo> listacheq = ds.obtenerDetalleChequeo();
 		model.addAttribute("dchequeo", listacheq);

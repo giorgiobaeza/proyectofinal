@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import cl.grupo2.proyectofinal.modelo.Capacitacion;
 import cl.grupo2.proyectofinal.modelo.Cliente;
-import cl.grupo2.proyectofinal.modelo.Pagos;
 import cl.grupo2.proyectofinal.servicio.CapacitacionServicio;
 import cl.grupo2.proyectofinal.servicio.ClienteServicio;
 
