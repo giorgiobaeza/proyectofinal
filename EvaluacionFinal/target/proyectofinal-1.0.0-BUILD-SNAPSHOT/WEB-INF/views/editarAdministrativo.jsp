@@ -68,12 +68,17 @@
                     <td>Area</td>
                     <td><input type="text" name="txtadmsistemasalud" value='<c:out value="${adm.getArea()}"/>'/></td>
                 </tr>
-				<tr>
+				<tr style="display:none">
                     <td>Run Usuario</td>
                     <td><input type="text" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
                 </tr>
                 <tr>
 					<td><input type="submit" value="Ingresar Administrativo"></td>
+					<td>
+						<a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>
+							<button type="button">Volver</button>
+						</a>
+					</td>
 				</tr>
                 </table>
         </form>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,7 +71,13 @@
 				<tr>
 				<tr>
                     <td>Rut Cliente</td>
-                    <td><input type="text" name="txtClienterutcliente" id="pagcliente_rutcliente" /></td>
+                    <td>
+                    	<select name="txtCliente_rutcliente">
+	            			<c:forEach items="${lcli}" var="lc">
+                    			<option value='<c:out value="${lc.getRutCliente()}" />'><c:out value="${lc.getRutCliente()}" /></option>
+                    		</c:forEach>
+                    	</select>
+                    </td>
                 </tr>
 				<tr>
 					<td><input type="submit" value="Ingresar Pago"></td>

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import cl.grupo2.proyectofinal.modelo.DetalleChequeo;
-import cl.grupo2.proyectofinal.modelo.Pagos;
 import cl.grupo2.proyectofinal.servicio.DetalleChequeoServicio;
 
 @Controller
