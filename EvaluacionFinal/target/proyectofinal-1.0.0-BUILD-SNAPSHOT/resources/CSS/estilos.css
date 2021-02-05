@@ -282,7 +282,7 @@ footer {
 
 @media screen and (max-width: 767px) {
     header {
-        height: 300px;
+        height: 340px;
     }
     header label{
         display: block;
@@ -295,6 +295,7 @@ footer {
 
 nav {
     position: absolute;
+    padding-top: 5px;
     top: 50px;
     left: 0;
     justify-content: flex-start;
@@ -347,7 +348,7 @@ header .textos-header {
 
 .contenedor-nuestras-asesorias {
     display: block;
-    padding: 10px 0 5px 0;
+    padding: 60px 0 5px 0;
 }
 
 .imagen-asesorias {

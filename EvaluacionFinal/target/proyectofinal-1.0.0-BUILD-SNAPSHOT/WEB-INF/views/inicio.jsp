@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/1d5353b7f3.js" crossorigin="anonymous"></script>
     <title>Inicio</title>
   
-    <link href='<c:out value="${pageContext.request.contextPath}"/>/resources/CSS/estilo.css' rel="stylesheet">
+    <link href='<c:out value="${pageContext.request.contextPath}"/>/resources/CSS/estilos.css' rel="stylesheet">
 </head>
 <body>
     <header>
@@ -23,9 +23,9 @@
         <label for="btn-menu"><i class="fas fa-bars"></i></label>
         <nav>
             <ul>
-            	<li><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Inicio</a></li>
-            	<li><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Login</a></li>
-            	<li><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Contacto</a></li>
+            	<li class="efecto"><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Inicio</a></li>
+            	<li class="efecto"><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Login</a></li>
+            	<li class="efecto"><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Contacto</a></li>
             </ul>
         </nav>
         <section class="textos-header">
@@ -41,7 +41,7 @@
     <main>
         <section class="contenedor nuestras-asesorias">
             <div class="contenedor-nuestras-asesorias">
-                <img src="Imagenes/Asesorias.png" alt="" class="imagen-asesorias">
+            	<img src='<c:out value="${pageContext.request.contextPath}"/>/resources/Imagenes/Asesorias.png' alt="" class="imagen-asesorias">
                 <div class="contenido-textos">
                     <h2 class="titulo-asesorias">Asesorias</h2>
                     <p>Nuestras asesorías están dirigidas a todas aquellas empresas que necesitan reforzar sus procesos
@@ -56,19 +56,20 @@
                 <h2 class="titulo-procesos">Nuestros procesos y servicios</h2>
                 <div class="procesos-servicios">
                     <div class="imagen-procesos1">
-                        <img src="imagenes/ilustracion1.png" alt="">
-                        <h3>Visitas constantes a nuestros clientes</h3>
+                    
+                    <img src='<c:out value="${pageContext.request.contextPath}"/>/resources/Imagenes/ilustracion1.png' alt="">
+                    <h3>Visitas constantes a nuestros clientes</h3>
                         <P>Visitamos su lugar de trabajo, oficinas, centros de distribucion
                             y salas de ventas para una evaluacion de protocolos de seguridad</P>
                     </div>
                     <div class="imagen-procesos2">
-                        <img src="imagenes/ilustracion2.png" alt="">
+                    <img src='<c:out value="${pageContext.request.contextPath}"/>/resources/Imagenes/ilustracion2.png' alt="">
                         <h3>Analisis de seguridad en su empresa</h3>
                         <P>Reconocimiento de protocolos y estructuras de
                             seguridad según evaluación de nuestros profesionales</P>
                     </div>
                     <div class="imagen-procesos3">
-                        <img src="imagenes/ilustracion3.png" alt="">
+                    	<img src='<c:out value="${pageContext.request.contextPath}"/>/resources/Imagenes/ilustracion3.png' alt="">
                         <h3>Capacitaciones frecuentes</h3>
                         <P>Capacitamos a su personal determinando protocolos
                             de seguridad para las diferentes areas</P>
@@ -82,9 +83,9 @@
             <h2>Siguenos en nuestras redes sociales</h2>
         </div>
         <div class="redes-footer">
-            <img src="Imagenes/facebook.png">
-            <img src="Imagenes/instagram.png">
-            <img src="Imagenes/twitter.png">
+        	<img src='<c:out value="${pageContext.request.contextPath}"/>/resources/Imagenes/facebook.png' alt="">
+        	<img src='<c:out value="${pageContext.request.contextPath}"/>/resources/Imagenes/instagram.png' alt="">
+        	<img src='<c:out value="${pageContext.request.contextPath}"/>/resources/Imagenes/twitter.png' alt="">
         </div>
         <h2 class="titulo-final">© 2021 @grupo2 - Todos los derechos reservados</h2>
     </footer>
