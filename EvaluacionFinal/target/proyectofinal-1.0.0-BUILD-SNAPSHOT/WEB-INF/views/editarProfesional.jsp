@@ -40,41 +40,41 @@
                 <li><a href="listadopago.html">Listado Pago</a></li>
                 <li><a href="listadoasesorias.html">Listado Asesorías</a></li>
                 <li><a href="listadoaccidentes.html">Listado Accidentes</a></li>-->
-                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarProfesionals'>Lista de Profesionals</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarProfesional'>Lista de Profesionals</a></li>
             </ul>
         </nav>
         </div>
     </header>
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/procesarEditar' class="cmxform" id="capForm">
+        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/procesarEditarProfesional' class="cmxform" id="capForm">
             <table class="cel- tablas-t tablas-e">
                 <tr>
                 	<td>Rut Profesional</td>
-                	<td><input type="text" name="txtrutProfesional" value='<c:out value="${pro.getRutProfesional()}"/>' readonly="readonly"/></td>
+                	<td><input type="text" name="txtrutprofesional" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
                 </tr>
                 <tr>
                     <td>Nombres</td>
-                    <td><input type="text" name="txtproNombres" value='<c:out value="${pro.getproNombres()}"/>'/></td>
+                    <td><input type="text" name="txtpronombres" value='<c:out value="${pro.getNombres()}"/>'/></td>
                 </tr>
                 <tr>
                     <td>Apellidos</td>
-                    <td><input type="text" name="txtproApellidos" value='<c:out value="${pro.getproApellidos()}"/>'/></td>
+                    <td><input type="text" name="txtproapellidos" value='<c:out value="${pro.getApellidos()}"/>'/></td>
                 </tr>
                 <tr>
                     <td>Telefono</td>
-                    <td><input type="text" name="txtproTelefono" value='<c:out value="${pro.getproTelefono()}"/>'/></td>
+                    <td><input type="text" name="txtprotelefono" value='<c:out value="${pro.getTelefono()}"/>'/></td>
                 </tr>
                 <tr>
                     <td>Título Profesional</td>
-                    <td><input type="text" name="txtprotituloprofesional" value='<c:out value="${pro.proTituloProfesional()}"/>'/></td>
+                    <td><input type="text" name="txtprotitulo" value='<c:out value="${pro.getTituloProfesional()}"/>'/></td>
                 </tr>
 				<tr>
                     <td>Proyecto</td>
-                    <td><input type="text" name="txtproProyecto" value='<c:out value="${pro.proProyecto()}"/>'/></td>
+                    <td><input type="text" name="txtproproyecto" value='<c:out value="${pro.getProyecto()}"/>'/></td>
                 </tr>
 				<tr>
                     <td>Run Usuario</td>
-                    <td><input type="text" name="txtusuariorun" value='<c:out value="${pro.getUsuario_run()}"/>' readonly="readonly"/></td>
+                    <td><input type="text" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
                 </tr>
                 <tr>
 					<td><input type="submit" value="Ingresar Profesional"></td>

@@ -46,11 +46,11 @@
         </div>
     </header>
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/procesarEditar' class="cmxform" id="capForm">
+        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/procesarEditarCliente' class="cmxform" id="capForm">
             <table class="cel- tablas-t tablas-e">
                 <tr>
                 	<td>Rut Cliente</td>
-                	<td><input type="text" name="txtrutCliente" value='<c:out value="${cli.getRutCliente()}"/>' readonly="readonly"/></td>
+                	<td><input type="text" name="txtrutCliente" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
                 </tr>
                 <tr>
                     <td>Nombres</td>
@@ -86,7 +86,7 @@
                 </tr>
                 <tr>
                     <td>Run Usuario</td>
-                    <td><input type="text" name="txtusuariorun" value='<c:out value="${cli.getUsuario_run()}"/>' readonly="readonly"/></td>
+                    <td><input type="text" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
                 </tr>
                 <tr>
 					<td><input type="submit" value="Ingresar Cliente"></td>

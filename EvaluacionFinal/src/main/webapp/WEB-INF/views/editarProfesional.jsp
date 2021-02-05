@@ -40,7 +40,7 @@
                 <li><a href="listadopago.html">Listado Pago</a></li>
                 <li><a href="listadoasesorias.html">Listado Asesorías</a></li>
                 <li><a href="listadoaccidentes.html">Listado Accidentes</a></li>-->
-                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarProfesional'>Lista de Profesionals</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarPagos'>Lista de Pagos</a></li>
             </ul>
         </nav>
         </div>
@@ -61,12 +61,12 @@
                     <td><input type="text" name="txtproapellidos" value='<c:out value="${pro.getApellidos()}"/>'/></td>
                 </tr>
                 <tr>
-                    <td>Telefono</td>
+                    <td>Teléfono</td>
                     <td><input type="text" name="txtprotelefono" value='<c:out value="${pro.getTelefono()}"/>'/></td>
                 </tr>
                 <tr>
                     <td>Título Profesional</td>
-                    <td><input type="text" name="txtprotitulo" value='<c:out value="${pro.getTituloProfesional()}"/>'/></td>
+                    <td><input type="text" name="txtprotitulo" value='<c:out value="${pro.getTituloprofesional()}"/>'/></td>
                 </tr>
 				<tr>
                     <td>Proyecto</td>
@@ -78,9 +78,11 @@
                 </tr>
                 <tr>
 					<td><input type="submit" value="Ingresar Profesional"></td>
+					<td></td>
 				</tr>
                 </table>
         </form>
+        <a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'><button>Volver</button></a>
     </fieldset>
     <footer id="pie">
         <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Vover a Inicio</a></blockquote>

@@ -36,7 +36,7 @@ public class ProfesionalControlador {
 		@RequestParam ("txtrutprofesional") int run,
 		@RequestParam ("txtpronombres") String nombres,
 		@RequestParam ("txtproapellidos") String apellidos,
-		@RequestParam ("txtprotelefono") int telefono,
+		@RequestParam ("txtprotelefono") long telefono,
 		@RequestParam ("txtprotitulo") String tituloProfesional,
 		@RequestParam ("txtproproyecto") String proyecto,
 		@RequestParam ("txtusuariorun") int usuario_run) {

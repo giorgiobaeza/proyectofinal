@@ -6,7 +6,6 @@ import javax.persistence.Id;
 @Entity
 public class Cliente {
 	
-	
 	private int rutCliente;
 	private String cliNombres;
 	private String cliApellidos;

@@ -1,7 +1,7 @@
 package cl.grupo2.proyectofinal.controlador;
 
-//import org.springframework.security.core.Authentication;
-//import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,7 +35,7 @@ public class InicioControlador {
 	        return "login";
 	    }
 	    
-	   /* @RequestMapping("/logout")
+	    @RequestMapping("/logout")
 	    public String logout()
 	    {
 	        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -43,5 +43,5 @@ public class InicioControlador {
 	        SecurityContextHolder.getContext().setAuthentication(null);
 	        }
 	        return "redirect:/login?logout"; 
-	    }*/
+	    }
 }
