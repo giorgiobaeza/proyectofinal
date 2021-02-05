@@ -4,7 +4,6 @@ import java.util.List;
 
 import cl.grupo2.proyectofinal.modelo.Cliente;
 
-
 public interface ClienteServicio {
 
 	public List<Cliente> obtenerCliente();

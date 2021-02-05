@@ -148,7 +148,7 @@ CREATE TABLE pagos (
     fechapago              VARCHAR2(100) NOT NULL,
     monto                  NUMBER NOT NULL,
     mes                    VARCHAR2(20) NOT NULL,
-    a�o                    NUMBER(4) NOT NULL,
+    anio                    NUMBER(4) NOT NULL,
     cliente_rutcliente   NUMBER(9) NOT NULL
 )
 LOGGING;
@@ -287,9 +287,9 @@ END;
 /
 
 --SE CREAN REGISTROS PARA TABLA USUARIOS
-INSERT INTO usuario values ('rosita', 'rosales', '04/11/1967', 123123456, 'cliente');
-INSERT INTO usuario values ('juanita', 'flores', '23/01/1987', 123456456, 'cliente');
-INSERT INTO usuario values ('emilio', 'perez', '12/03/1993', 111123456, 'cliente');
+INSERT INTO usuario values ('rosita', 'rosales', '04/11/1967', 123456748, 'cliente');
+INSERT INTO usuario values ('juanita', 'flores', '23/01/1987', 129467767, 'cliente');
+INSERT INTO usuario values ('emilio', 'perez', '12/03/1993', 456874578, 'cliente');
 INSERT INTO usuario values ('joaquin', 'moralez', '07/05/1989', 182345673, 'administrativo');
 INSERT INTO usuario values ('manuel', 'lopez', '28/01/1959', 178883994, 'administrativo');
 INSERT INTO usuario values ('olga', 'medina', '22/10/1992', 165556732, 'administrativo');
@@ -298,9 +298,9 @@ INSERT INTO usuario values ('alfredo', 'perez', '17/08/1979', 159806431, 'profes
 INSERT INTO usuario values ('felipe', 'flores', '27/02/1987', 912456778, 'profesional');
 
 --SE CREAN REGISTROS PARA TABLA CLIENTES
-INSERT INTO cliente values (123456748, 'rosita', 'rosales', 5555555, 'modelo', 'fonasa', 'calle c', 'colina', 40, 123123456);
-INSERT INTO cliente values (129467767, 'juanita', 'flores', 6666666, 'modelo', 'fonasa', 'calle 3', 'colina', 42, 123456456);
-INSERT INTO cliente values (456874578, 'emilio', 'perez', 5556663, 'modelo', 'fonasa', 'calle a', 'valparaiso', 46, 111123456);
+INSERT INTO cliente values (123456748, 'rosita', 'rosales', 5555555, 'modelo', 'fonasa', 'calle c', 'colina', 40, 123456748);
+INSERT INTO cliente values (129467767, 'juanita', 'flores', 6666666, 'modelo', 'fonasa', 'calle 3', 'colina', 42, 129467767);
+INSERT INTO cliente values (456874578, 'emilio', 'perez', 5556663, 'modelo', 'fonasa', 'calle a', 'valparaiso', 46, 456874578);
 
 --SE CREAN REGISTROS PARA TABLA CAPACITACION
 INSERT INTO capacitacion values(1, '09/02/2021', '13:30', 'colina', 120, 123456748);

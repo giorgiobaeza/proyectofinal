@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import cl.grupo2.proyectofinal.modelo.Cliente;
 import cl.grupo2.proyectofinal.modelo.ClienteRepositorio;
 
-
 @Service
 public class ClienteServicioImpl implements ClienteServicio{
 

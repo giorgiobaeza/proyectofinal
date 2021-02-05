@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import cl.grupo2.proyectofinal.modelo.Cliente;
+import cl.grupo2.proyectofinal.modelo.Usuario;
 import cl.grupo2.proyectofinal.servicio.ClienteServicio;
-
+import cl.grupo2.proyectofinal.servicio.UsuarioServicio;
 
 @Controller
 public class ClienteControlador {
@@ -18,10 +19,15 @@ public class ClienteControlador {
 	@Autowired
 	ClienteServicio cs;
 	
+	@Autowired
+	UsuarioServicio us;
+	
 	@RequestMapping(value="/editarCliente/{usuario_run}", method = RequestMethod.GET)
 	public String editarCliente(Model model, @PathVariable int usuario_run) {
 		Cliente rutcli = cs.obtenerClientePorId(usuario_run);
 		model.addAttribute("cli", rutcli);
+		Usuario rutusr = us.obtenerUsuarioPorId(usuario_run);
+		model.addAttribute("usr", rutusr);
 		return "editarCliente";
 	}	
 	

@@ -22,7 +22,12 @@ public class UsuarioServicioImpl implements UsuarioServicio{
 	@Override
 	public boolean crearUsuario(Usuario usr) {
 		ur.save(usr);
-		return false;
+		return true;
+	}
+
+	@Override
+	public Usuario obtenerUsuarioPorId(int run) {
+		return ur.findOne(run);
 	}
 
 	

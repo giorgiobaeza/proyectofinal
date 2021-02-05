@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Editar Cliente</title>
+<title>Editar Administrativo</title>
 	<link href='<c:out value="${pageContext.request.contextPath}"/>/resources/css/estilo.css' rel="stylesheet">
     <script type="text/javascript" src='<c:out value="${pageContext.request.contextPath}">/resources/js/script.js</c:out>'></script>   
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
 		<header id="seccion">
-        <h2>Editar Cliente</h2>
+        <h2>Editar Administrativo</h2>
         <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/cerrarsesion'>Cerrar Sesión</a></blockquote>
         <div class="content-menu">
         <input type="checkbox" id="check">
@@ -40,56 +40,40 @@
                 <li><a href="listadopago.html">Listado Pago</a></li>
                 <li><a href="listadoasesorias.html">Listado Asesorías</a></li>
                 <li><a href="listadoaccidentes.html">Listado Accidentes</a></li>-->
-                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarClientes'>Lista de clientes</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarAdministrativos'>Lista de Administrativos</a></li>
             </ul>
         </nav>
         </div>
     </header>
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/procesarEditarCliente' class="cmxform" id="capForm">
+        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/procesarEditarAdministrativo' class="cmxform" id="capForm">
             <table class="cel- tablas-t tablas-e">
                 <tr>
-                	<td>Rut Cliente</td>
-                	<td><input type="text" name="txtrutCliente" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
+                	<td>Rut Administrativo</td>
+                	<td><input type="text" name="txtrutadministrativo" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
                 </tr>
                 <tr>
                     <td>Nombres</td>
-                    <td><input type="text" name="txtcliNombres" value='<c:out value="${cli.getCliNombres()}"/>'/></td>
+                    <td><input type="text" name="txtadmnombres" value='<c:out value="${adm.getNombres()}"/>'/></td>
                 </tr>
                 <tr>
                     <td>Apellidos</td>
-                    <td><input type="text" name="txtcliApellidos" value='<c:out value="${cli.getCliApellidos()}"/>'/></td>
+                    <td><input type="text" name="txtadmapellidos" value='<c:out value="${adm.getApellidos()}"/>'/></td>
                 </tr>
                 <tr>
-                    <td>Telefono</td>
-                    <td><input type="text" name="txtcliTelefono" value='<c:out value="${cli.getCliTelefono()}"/>'/></td>
-                </tr>
-                <tr>
-                    <td>AFP</td>
-                    <td><input type="text" name="txtcliAfp" value='<c:out value="${cli.getCliAfp()}"/>'/></td>
+                    <td>Email</td>
+                    <td><input type="text" name="txtadmafp" value='<c:out value="${adm.getEmail()}"/>'/></td>
                 </tr>
 				<tr>
-                    <td>Sistema de Salud</td>
-                    <td><input type="text" name="txtcliSistemaSalud" value='<c:out value="${cli.getCliSistemaSalud()}"/>'/></td>
+                    <td>Area</td>
+                    <td><input type="text" name="txtadmsistemasalud" value='<c:out value="${adm.getArea()}"/>'/></td>
                 </tr>
 				<tr>
-                    <td>Direccion</td>
-                    <td><input type="text" name="txtcliDireccion" value='<c:out value="${cli.getCliDireccion()}"/>'/></td>
-                </tr>
-                <tr>
-                    <td>Comuna</td>
-                    <td><input type="text" name="txtcliComuna" value='<c:out value="${cli.getCliComuna()}"/>'/></td>
-                </tr>
-                <tr>
-                    <td>Edad</td>
-                    <td><input type="text" name="txtcliEdad" value='<c:out value="${cli.getCliEdad()}"/>'/></td>
-                </tr>
-                <tr>
                     <td>Run Usuario</td>
                     <td><input type="text" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
                 </tr>
                 <tr>
-					<td><input type="submit" value="Ingresar Cliente"></td>
+					<td><input type="submit" value="Ingresar Administrativo"></td>
 				</tr>
                 </table>
         </form>

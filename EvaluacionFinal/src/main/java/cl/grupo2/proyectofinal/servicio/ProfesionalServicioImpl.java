@@ -42,4 +42,5 @@ public class ProfesionalServicioImpl implements ProfesionalServicio{
 	public Profesional obtenerProfesionalPorId(int usuario_run) {
 		return pr.findOne(usuario_run);
 	}
+	
 }
