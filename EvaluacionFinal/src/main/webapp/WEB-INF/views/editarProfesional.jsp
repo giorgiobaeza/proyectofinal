@@ -72,17 +72,20 @@
                     <td>Proyecto</td>
                     <td><input type="text" name="txtproproyecto" value='<c:out value="${pro.getProyecto()}"/>'/></td>
                 </tr>
-				<tr>
+				<tr style="display:none">
                     <td>Run Usuario</td>
                     <td><input type="text" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
                 </tr>
                 <tr>
 					<td><input type="submit" value="Ingresar Profesional"></td>
-					<td></td>
+					<td>
+						<a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>
+							<button type="button">Volver</button>
+						</a>
+					</td>
 				</tr>
                 </table>
         </form>
-        <a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'><button>Volver</button></a>
     </fieldset>
     <footer id="pie">
         <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Vover a Inicio</a></blockquote>

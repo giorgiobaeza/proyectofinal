@@ -71,7 +71,13 @@
 				<tr>
 				<tr>
                     <td>Rut Cliente</td>
-                    <td><input type="text" name="cliente_rutcliente" id="capcliente_rutcliente" /></td>
+					<td>
+                    	<select name="txtCliente_rutcliente">
+	            			<c:forEach items="${lcli}" var="lc">
+                    			<option value='<c:out value="${lc.getRutCliente()}" />'><c:out value="${lc.getRutCliente()}" /></option>
+                    		</c:forEach>
+                    	</select>
+                    </td>
                 </tr>
 				<tr>
 					<td><input type="submit" value="Ingresar Capacitacíon"></td>

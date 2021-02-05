@@ -70,7 +70,13 @@
                 </tr>
 				<tr>
                     <td>Sistema de Salud</td>
-                    <td><input type="text" name="txtcliSistemaSalud" value='<c:out value="${cli.getCliSistemaSalud()}"/>'/></td>
+                    <td>
+                    	<select name="txtcliSistemaSalud">
+                    		<option>Seleccione una opción</option>
+                    		<option value="Fonasa">Fonasa</option>
+                    		<option value="Isapre">Isapre</option>
+                    	</select>
+                    </td>
                 </tr>
 				<tr>
                     <td>Direccion</td>
@@ -84,12 +90,17 @@
                     <td>Edad</td>
                     <td><input type="text" name="txtcliEdad" value='<c:out value="${cli.getCliEdad()}"/>'/></td>
                 </tr>
-                <tr>
+                <tr style="display:none">
                     <td>Run Usuario</td>
                     <td><input type="text" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
                 </tr>
                 <tr>
 					<td><input type="submit" value="Ingresar Cliente"></td>
+					<td>
+						<a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>
+							<button type="button">Volver</button>
+						</a>
+					</td>
 				</tr>
                 </table>
         </form>

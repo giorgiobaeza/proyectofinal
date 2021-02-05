@@ -10,13 +10,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import cl.grupo2.proyectofinal.modelo.Capacitacion;
+import cl.grupo2.proyectofinal.modelo.Cliente;
+import cl.grupo2.proyectofinal.modelo.Pagos;
 import cl.grupo2.proyectofinal.servicio.CapacitacionServicio;
+import cl.grupo2.proyectofinal.servicio.ClienteServicio;
 
 @Controller
 public class CapacitacionControlador {
 	
 	@Autowired
 	CapacitacionServicio cs; 
+	
+	@Autowired
+	ClienteServicio cls;
 	
 	@RequestMapping(value="/listarCapacitaciones", method = RequestMethod.GET)
 	public String obtenerCapacitacion(Model model) {
@@ -27,6 +33,8 @@ public class CapacitacionControlador {
 	
 	@RequestMapping(value="/crearCapacitacion", method = RequestMethod.GET)
 	public String crearCapacitacion(Model model) {
+		List<Cliente> listacli = cls.obtenerCliente();
+		model.addAttribute("lcli", listacli);
 		return "crearCapacitacion";
 	}
 
