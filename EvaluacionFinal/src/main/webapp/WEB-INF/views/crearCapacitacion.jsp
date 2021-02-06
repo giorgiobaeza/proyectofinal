@@ -48,9 +48,9 @@
     <fieldset class="cel- agrupar-t agrupar-e">
         <form method="post" action="crearCapacitacionProcesar" class="cmxform" id="capForm">
             <table class="cel- tablas-t tablas-e">
-                <tr>
+                <tr style="display:none">
                 	<td>Id Capacitación</td>
-                	<td><input type="text" name="idcapacitacion" id="idcap"/></td>
+                	<td><input type="text" name="idcapacitacion" id="idcap" value='<c:out value="${nid}"/>'/></td>
                 </tr>
                 <tr>
                     <td>Fecha de Capacitación</td>
@@ -72,7 +72,7 @@
 				<tr>
                     <td>Rut Cliente</td>
 					<td>
-                    	<select name="txtCliente_rutcliente">
+                    	<select name="cliente_rutcliente">
 	            			<c:forEach items="${lcli}" var="lc">
                     			<option value='<c:out value="${lc.getRutCliente()}" />'><c:out value="${lc.getRutCliente()}" /></option>
                     		</c:forEach>

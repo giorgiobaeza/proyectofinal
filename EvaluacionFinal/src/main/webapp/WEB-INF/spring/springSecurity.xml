@@ -19,6 +19,7 @@ http://www.springframework.org/schema/security/spring-security.xsd">
 <intercept-url pattern="/procesarEditarProfesional" access="hasRole('ADMINISTRATIVO')" />
 <intercept-url pattern="/listarUsuarios" access="hasRole('ADMINISTRATIVO')" />
 <intercept-url pattern="/listarVisitas" access="hasRole('PROFESIONAL')" />
+<intercept-url pattern="/crearVisita" access="hasRole('PROFESIONAL')" />
 <intercept-url pattern="/responderChecklist" access="hasRole('PROFESIONAL')" />
 <intercept-url pattern="/procesarResponderChecklist" access="hasRole('PROFESIONAL')" />
 <intercept-url pattern="/crearCapacitacion" access="hasRole('CLIENTE')" />

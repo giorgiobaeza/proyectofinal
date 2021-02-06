@@ -2,7 +2,6 @@ package cl.grupo2.proyectofinal.servicio;
 
 import java.util.List;
 
-import cl.grupo2.proyectofinal.modelo.Cliente;
 import cl.grupo2.proyectofinal.modelo.Visita;
 
 public interface VisitaServicio {

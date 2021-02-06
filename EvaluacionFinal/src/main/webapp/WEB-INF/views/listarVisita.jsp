@@ -40,9 +40,70 @@
         </div>
     </header>
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form action='<c:out value="${pageContext.request.contextPath}"/>/clilist'>
-			<p><input type="submit" value="obtener lista de visitas"></p>        	
+    	<table>
+    		<tr>
+    			<th>ID Visita</th>
+    			<th>Fecha</th>
+    			<th>Hora</th>
+    			<th>Lugar</th>
+    			<th>Comentario</th>
+    			<th>Rut Cliente</th>
+    		</tr>
+	    	<c:forEach items="${lvisita}" var="lv">
+	            <tr>
+	                <td><c:out value="${lv.getIdvisita()}" /></td>
+	                <td><c:out value="${lv.getVisfecha()}" /></td>
+	                <td><c:out value="${lv.getVishora()}" /></td>
+	                <td><c:out value="${lv.getVislugar()}" /></td>
+	                <td><c:out value="${lv.getViscomentarios()}" /></td>
+	 	            <td><c:out value="${lv.getCliente_rutcliente()}" /></td>
+	            
+	            <td>
+					<a href='<c:out value="${pageContext.request.contextPath}"/>/editarCliente/<c:out value="${lu.getRun()}"/>'>
+						<button>Editar</button>
+					</a>							
+				</td>
+				</tr>
+			</c:forEach>
+    	</table>
+        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/crearVisita'>
+        	<table>
+        		<tr Style="display:none">
+        			<td>Id Visita</td>
+        			<td><input type="text" name="txtidvisita" id="txtidvisita" value='<c:out value="${nid}"/>'/></td>
+        		</tr>
+        		<tr>
+        			<td>Fecha</td>
+        			<td><input type="date"  name="txtvisfecha" id="txtvisfecha"/></td>
+        		</tr>
+        		<tr>
+        			<td>Hora</td>
+        			<td><input type="text" name="txtvishora" id="txtvishora"/></td>
+        		</tr>
+        		<tr>
+        			<td>Lugar</td>
+        			<td><input type="text" name="txtvislugar" id="txtvislugar"/></td>
+        		</tr>
+        		<tr>
+        			<td>Comentario</td>
+        			<td><input type="text" name="txtviscomentarios" id="txtviscomentarios"/></td>
+        		</tr>
+        		<tr>
+        			<td>Rut cliente</td>
+					<td>
+                    	<select name="txtrutcliente">
+	            			<c:forEach items="${rutclie}" var="rc">
+                    			<option value='<c:out value="${rc.getRutCliente()}" />'><c:out value="${rc.getRutCliente()}"/></option>
+                    		</c:forEach>
+                    	</select>
+                    </td>        		
+                </tr>
+        		<tr>
+        			<td><input type="submit" value="Crear Visita"/></td>
+        		</tr>
+        	</table>
         </form>
+        <p><c:out value="${msgcrear}"/></p>
     </fieldset>
     <footer id="pie">
         <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Volver a la página de Inicio</a></blockquote>

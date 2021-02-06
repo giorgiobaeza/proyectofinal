@@ -12,11 +12,7 @@
     <script type="text/javascript" src='<c:out value="${pageContext.request.contextPath}">/resources/js/script.js</c:out>'></script>   
 </head>
 <body>
-	 <%String error = (String) request.getAttribute("error");
-		 if (error != null && error.equals("true"))
-		 {
-		 out.println("<h4 style=\"color:red\">Invalid login credentials. Please try again!!</h4>");
-	 }%>
+	
 	<header id="seccion">
         <h2> LOGIN</h2>
         <div class="content-menu">
@@ -51,6 +47,11 @@
 	<form name='loginForm' action="<c:url value='login' />" method='POST'>        
 		<fieldset class="cel- agrupar-t agrupar-e">
             <table class="cel- tablausr-t tablausr-e">
+             	<%String error = (String) request.getAttribute("error");
+					 if (error != null && error.equals("true"))
+					 {
+					 out.println("<h4 style=\"color:red\">Usuario o clave equivocada. Por favor intente nuevamente</h4>");
+				 }%>
                 <tr>
                     <td>Nombre Usuario</td>
                     <td><input type="text" name="username"  /></td>

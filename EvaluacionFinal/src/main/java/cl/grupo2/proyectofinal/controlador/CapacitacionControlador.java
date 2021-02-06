@@ -34,6 +34,9 @@ public class CapacitacionControlador {
 	public String crearCapacitacion(Model model) {
 		List<Cliente> listacli = cls.obtenerCliente();
 		model.addAttribute("lcli", listacli);
+		List<Capacitacion> listacapacitacion = cs.obtenerCapacitacion();
+		int numeroid = listacapacitacion.size() + 1; 
+		model.addAttribute("nid", numeroid);
 		return "crearCapacitacion";
 	}
 

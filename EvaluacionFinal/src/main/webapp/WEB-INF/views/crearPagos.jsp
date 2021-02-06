@@ -48,9 +48,9 @@
     <fieldset class="cel- agrupar-t agrupar-e">
         <form method="post" action="crearPagosProcesar" class="cmxform" id="pagForm">
             <table class="cel- tablas-t tablas-e">
-                <tr>
+                <tr style="display:none">
                 	<td>Id Pagos</td>
-                	<td><input type="text" name="txtidPagos" id="idpag"/></td>
+                	<td><input type="text" name="txtidPagos" id="idpag" value='<c:out value="${nid}"/>'/></td>
                 </tr>
                 <tr>
                     <td>Fecha de Pago</td>
@@ -62,7 +62,23 @@
                 </tr>
                 <tr>
                     <td>Mes</td>
-                    <td><input type="text" name="txtMes" id="pagmes"/></td>
+                    <td>
+                    	<select name="txtMes">
+                    	    <option>Seleccione una opción</option>
+                    		<option value="enero">Enero</option>
+                    		<option value="febrero">Febrero</option>
+                    		<option value="marzo">Marzo</option>
+                    		<option value="abril">Abril</option>
+                    		<option value="mayo">Mayo</option>
+                    		<option value="junio">Junio</option>
+                    		<option value="julio">Julio</option>
+                    		<option value="agosto">Agosto</option>
+                    		<option value="septiembre">Septiembre</option>
+                    		<option value="octubre">Octubre</option>
+                    		<option value="noviembre">Noviembre</option>
+                    		<option value="diciembre">Diciembre</option>
+                    	</select>
+                    </td>
                 </tr>
                 <tr>
                     <td>Año</td>

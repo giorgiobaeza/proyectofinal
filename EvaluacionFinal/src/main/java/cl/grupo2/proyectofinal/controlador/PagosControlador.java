@@ -34,6 +34,9 @@ public class PagosControlador {
 	public String crearPagos(Model model) {
 		List<Cliente> listacli = cs.obtenerCliente();
 		model.addAttribute("lcli", listacli);
+		List<Pagos> listaPagos = ps.obtenerPagos();
+		int numeroid = listaPagos.size() + 1;
+		model.addAttribute("nid", numeroid);
 		return "crearPagos";
 	}
 	

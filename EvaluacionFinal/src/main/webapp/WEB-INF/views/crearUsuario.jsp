@@ -46,7 +46,7 @@
         </div>
     </header>
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="post" action="crearUsuarioProcesar" class="cmxform" id="capForm">
+        <form method="get" action="crearUsuarioProcesar" class="cmxform" id="capForm">
             <table class="cel- tablas-t tablas-e">
                 <tr>
                 	<td>Nombre</td>
