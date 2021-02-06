@@ -37,7 +37,7 @@
     <main>
         <section class="contenedor contacto">
             <div class="contenedor-contacto">
-                <img src="Imagenes/contacto.png" alt="" class="imagen-contacto">
+                <img src='<c:out value="${pageContext.request.contextPath}"/>/resources/Imagenes/contacto.png' alt="" class="imagen-contacto">
                 <form class="contacto" method="post" action="contactoProcesar" class="cmxform" id="contForm"> 
                         <h2 class="titulo-contacto">Contáctanos</h2>
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre"/>
