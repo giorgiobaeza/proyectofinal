@@ -2,78 +2,65 @@
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Contacto</title>
-	<link href='<c:out value="${pageContext.request.contextPath}"/>/resources/css/estilo.css' rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src='<c:out value="${pageContext.request.contextPath}">/resources/js/script.js</c:out>'></script>   
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,200;1,300;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1d5353b7f3.js" crossorigin="anonymous"></script>    
+    <title>Contacto</title>
+
+    <link href='<c:out value="${pageContext.request.contextPath}"/>/resources/CSS/estilos.css' rel="stylesheet">
 </head>
+
 <body>
-	
-	<header id="seccion">
-        <h2> FORMULARIO DE CONTACTO</h2>
-        <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/cerrarsesion'>Cerrar Sesión</a></blockquote>
-        <div class="content-menu">
-        <input type="checkbox" id="check">
-			<label class="icon-menu" for="check">
-	        	<img src='<c:out value="${pageContext.request.contextPath}"/>/resources/img/icono-menu.png' alt="" class="icon-menu">
-	       	</label>		
-	    <!--<p>Bienvenido usuario: <c:out value="${nombresesion}"></c:out></p>		
-        <a href="./LogoutServlet">
-		cerrar sesión
-		</a>-->
-        <nav class="menu">
+    <header class="header-2">
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu" ><i class="fas fa-bars"></i></label>
+        <nav>
             <ul>
-            	<li><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Inicio</a></li>
-                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/contacto'>Contacto</a></li>
-                <!--<li><a href="loginServlet">Ingreso</a></li>-->
-                <!--<li><a href="FormCrearUsuarioServlet">Crear Usuario</a></li>-->
-                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/crearCapacitacion'>Crear Capacitaciones</a></li>
-                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>Listado de Usuarios</a></li>
-                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarCapacitaciones'>Listar Capacitaciones</a></li>
-                <!--<li><a href="administrarasistentes.html">Asistentes Capacitaciones</a></li>
-                <li><a href="listadovisitas.html">Listado Visitas</a></li>
-                <li><a href="listadopago.html">Listado Pago</a></li>
-                <li><a href="listadoasesorias.html">Listado Asesorías</a></li>
-                <li><a href="listadoaccidentes.html">Listado Accidentes</a></li>-->
-                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarClientes'>Lista de clientes</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Inicio</a></li>                
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Login</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Contacto</a></li>
             </ul>
         </nav>
-        </div>
-    </header>
-
-    <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="post" action="contactoProcesar" class="cmxform" id="contForm"> 
-            <table class="cel- tablas-t tablas-e">
-                <tr>
-                    <td>Nombre</td>
-                    <td><input type="text" name="nombre" /></td>
-                </tr>
-                <tr>
-                    <td>Correo Electrónico</td>
-                    <td><input type="email" name="email" /></td>
-                </tr>
-                <tr>
-                    <td>Teléfono</td>
-                    <td><input type="text" name="telefono" /></td>
-                </tr>
-                <tr>
-                    <td>Mensaje</td>
-                    <td><input type="text" name="mensaje" /></td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="Enviar" /></td>
-                </tr>
-            </table>
-        </form>
+        <div class="wave-2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+            style="height: 100%; width: 100%;">
+            <path d="M-1.41,131.73 C169.01,195.88 329.85,35.03 518.90,148.52 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: rgb(255, 255, 255);"></path>
+        </svg></div>
         
-    </fieldset>
+    </header>
+    <main>
+        <section class="contenedor contacto">
+            <div class="contenedor-contacto">
+                <img src="Imagenes/contacto.png" alt="" class="imagen-contacto">
+                <form class="contacto" method="post" action="contactoProcesar" class="cmxform" id="contForm"> 
+                        <h2 class="titulo-contacto">Contáctanos</h2>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre"/>
+                        <input type="email" id="email" name="email" placeholder="Correo Electronico"/>
+                        <input type="text" id="telefono" name="telefono" placeholder="Teléfono"/>
+                        <input type="text" id="mensaje" name="mensaje" placeholder="Mensaje"/>
+                        <input type="submit" value="Enviar">
+                    </form>
+            </div>
+        </section>        
+    </main>
+   <footer>
+        <div class="siguenos">
+            <h2>Siguenos en nuestras redes sociales</h2>
+        </div>
+        <div class="redes-footer">
+        	<img src='<c:out value="${pageContext.request.contextPath}"/>/resources/Imagenes/facebook.png' alt="">
+        	<img src='<c:out value="${pageContext.request.contextPath}"/>/resources/Imagenes/instagram.png' alt="">
+        	<img src='<c:out value="${pageContext.request.contextPath}"/>/resources/Imagenes/twitter.png' alt="">
+        </div>
+        <h2 class="titulo-final">© 2021 @grupo2 - Todos los derechos reservados</h2>
+    </footer>
+    <script src="menu.js"></script>
+</body> 
 
-    <footer id="pie">
-        <blockquote><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Volver a la página de Inicio</a></blockquote>
-        Derechos Reservados G3 &copy; 2020
-      </footer>
-</body>
 </html>
