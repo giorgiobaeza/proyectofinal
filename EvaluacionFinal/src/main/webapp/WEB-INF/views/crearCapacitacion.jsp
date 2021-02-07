@@ -33,9 +33,7 @@
         </svg></div>
         
     </header>
-		
-    <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="post" action="crearCapacitacionProcesar" class="cmxform" id="capForm">
+       <form method="post" action="crearCapacitacionProcesar" class="cmxform" id="capForm">
             <table class="cel- tablas-t tablas-e">
                 <tr style="display:none">
                 	<td>Id Capacitación</td>
@@ -72,9 +70,7 @@
 					<td><input type="submit" value="Ingresar Capacitacíon"></td>
 				</tr>
                 </table>
-        </form>
-    </fieldset>
-    
+        </form>   
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>
