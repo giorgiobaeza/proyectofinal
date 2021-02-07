@@ -9,8 +9,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,200;1,300;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
-        <script src="https://kit.fontawesome.com/1d5353b7f3.js" crossorigin="anonymous"></script>    
+        rel="stylesheet">   
     <title>Contacto</title>
 
     <link href='<c:out value="${pageContext.request.contextPath}"/>/resources/CSS/estilos.css' rel="stylesheet">
