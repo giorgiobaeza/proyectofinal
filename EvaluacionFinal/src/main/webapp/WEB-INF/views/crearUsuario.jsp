@@ -22,8 +22,10 @@
         <nav>
             <ul>
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Inicio</a></li>
-                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Listar Capacitación</a></li>
-                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Contacto</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/crearUsuario'>Crear Usuario</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>Listar Usuarios</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarPagos'>Listar pagos</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/contacto'>Contacto</a></li>
             </ul>
         </nav>
         <div class="wave-2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
