@@ -27,51 +27,37 @@
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/contacto'>Contacto</a></li>
             </ul>
         </nav>
-        <div class="wave-2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-            style="height: 100%; width: 100%;">
-            <path d="M-1.41,131.73 C169.01,195.88 329.85,35.03 518.90,148.52 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: rgb(255, 255, 255);"></path>
-        </svg></div>
+        <div class="wave-2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
+                preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                
+            </svg></div>
         
     </header>
-       <form method="post" action="crearCapacitacionProcesar" class="cmxform" id="capForm">
-            <table class="cel- tablas-t tablas-e">
-                <tr style="display:none">
-                	<td>Id Capacitación</td>
-                	<td><input type="text" name="idcapacitacion" id="idcap" value='<c:out value="${nid}"/>'/></td>
-                </tr>
-                <tr>
-                    <td>Fecha de Capacitación</td>
-                    <td><input type="date" name="capfecha" id="capfecha"/></td>
-                </tr>
-                <tr>
-                    <td>Hora de Capacitación</td>
-                    <td><input type="time" name="caphora" id="caphora"/></td>
-                </tr>
-                <tr>
-                    <td>Lugar</td>
-                    <td><input type="text" name="caplugar" id="caplugar"/></td>
-                </tr>
-                <tr>
-                    <td>Duración</td>
-                    <td><input type="text" name="capduracion" id="capduracion" /></td>
-                </tr>
-				<tr>
-				<tr>
-                    <td>Rut Cliente</td>
-					<td>
-                    	<select name="cliente_rutcliente">
-	            			<c:forEach items="${lcli}" var="lc">
-                    			<option value='<c:out value="${lc.getRutCliente()}" />'><c:out value="${lc.getRutCliente()}" /></option>
-                    		</c:forEach>
-                    	</select>
-                    </td>
-                </tr>
-				<tr>
-					<td><input type="submit" value="Ingresar Capacitacíon"></td>
-				</tr>
-                </table>
-        </form>   
+    <div class="contenedor-crear-capacitacion">
+        <form method="post" action="crearCapacitacionProcesar" class="cmxform" id="capForm">
+            <h2 id="titulo-crearcapacitacion">Crear Capacitacíon</h2>
+            <label id="label-crearcapacitacion">Id Capacitación</label>
+            <input type="text" name="idcapacitacion" id="form-capacitacion" value='<c:out value="${nid}"/>'/>
+            <label id="label-crearcapacitacion">Fecha de Capacitación</label>
+            <input type="date" name="capfecha" id="form-capacitacion"/>
+            <label id="label-crearcapacitacion">Hora de Capacitación</label>
+            <input type="time" name="caphora" id="form-capacitacion"/>
+            <label id="label-crearcapacitacion">Lugar de Capacitación</label>
+            <input type="text" name="caplugar" id="form-capacitacion"/>
+            <label id="label-crearcapacitacion">Duración de Capacitación en minutos</label>
+            <input type="text" name="capduracion" id="form-capacitacion"/>
+            <label id="label-crearcapacitacion">Seleccione Rut de Cliente</label>
+            <select name="cliente_rutcliente" id="form-capacitacion">
+                <c:forEach items="${lcli}" var="lc">
+                    <option value='<c:out value="${lc.getRutCliente()}" />'>
+                        <c:out value="${lc.getRutCliente()}" />
+                    </option>
+                </c:forEach>
+            </select>
+            <input type="submit" value="Ingresar Capacitación" id="boton-crearcapacitacion">
+        </form>
+    </div>
+    
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>
