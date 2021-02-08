@@ -15,7 +15,8 @@
     <link href='<c:out value="${pageContext.request.contextPath}"/>/resources/CSS/estilos.css' rel="stylesheet">
 </head>
 
-<body>
+<body class="body-imagen" background="Imagenes/fondo-paginas.png"> 
+      
     <header class="header-2">
         <input type="checkbox" id="btn-menu">
         <label for="btn-menu" ><i class="fas fa-bars"></i></label>
