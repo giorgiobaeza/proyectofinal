@@ -25,39 +25,29 @@
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Contacto</a></li>
             </ul>
         </nav>
-        <div class="wave-2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-            style="height: 100%; width: 100%;">
-            <path d="M-1.41,131.73 C169.01,195.88 329.85,35.03 518.90,148.52 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: rgb(255, 255, 255);"></path>
-        </svg></div>
+        <div class="wave-2" style="height: 90px; overflow: hidden;">
+
+            </svg></div>
         
     </header>
-	<form name='loginForm' action="<c:url value='login' />" method='POST'>        
-		<fieldset class="cel- agrupar-t agrupar-e">
-            <table class="cel- tablausr-t tablausr-e">
-             	<%String error = (String) request.getAttribute("error");
+     <div class="contenedor-login">
+            <img src="Imagenes/login.png" alt="" class="imagen-login">
+            <form id="login" method='POST' name='loginForm' action="<c:url value='login' />">
+                <h2 class="titulo-login">Bienvenido otra vez</h2>
+                <p>Gracias por regresar, por favor ingrese a su cuenta llenando este formulario</p>
+                <label for="" id="label-login">Nombre</label>
+                <input type="text" name="username" id="input-login" placeholder="Nombre" />
+                <label for="" id="label-login">Contraseña</label>
+                <input type="password" name="password" id="input-login" placeholder="Ingrese contraseña" />
+                <input type="submit" value="Ingresar" id="boton-login">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+            </form>
+            <%String error = (String) request.getAttribute("error");
 					 if (error != null && error.equals("true"))
 					 {
 					 out.println("<h4 style=\"color:red\">Usuario o clave equivocada. Por favor intente nuevamente</h4>");
 				 }%>
-                <tr>
-                    <td>Nombre Usuario</td>
-                    <td><input type="text" name="username"  /></td>
-                </tr>
-                <tr>
-                    <td>Contraseña</td>
-                    <td><input type="password" name="password"  /></td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="Enviar" /></td>
-                    <td><input type="hidden"
- 					name="${_csrf.parameterName}" value="${_csrf.token}" /></td>
-                </tr>
-                
-
-            </table>
-        </fieldset>
-    </form>
+        </div> 
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>

@@ -24,8 +24,8 @@
         <nav>
             <ul>
             	<li class="efecto"><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Inicio</a></li>
-            	<li class="efecto"><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Login</a></li>
-            	<li class="efecto"><a href='<c:out value="${pageContext.request.contextPath}"/>/'>Contacto</a></li>
+            	<li class="efecto"><a href='<c:out value="${pageContext.request.contextPath}"/>/login'>Login</a></li>
+            	<li class="efecto"><a href='<c:out value="${pageContext.request.contextPath}"/>/contacto'>Contacto</a></li>
             </ul>
         </nav>
         <section class="textos-header">
