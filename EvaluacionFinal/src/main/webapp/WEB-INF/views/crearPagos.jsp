@@ -70,7 +70,9 @@
                 </c:forEach>
             </select>
             <input type="submit" value="Ingresar Pago" id="boton-crearpagos">
+            
         </form>
+        	</div>
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>
