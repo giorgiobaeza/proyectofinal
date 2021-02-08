@@ -60,43 +60,30 @@
 				</tr>
 			</c:forEach>
     	</table>
-        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/crearVisita'>
-        	<table>
-        		<tr Style="display:none">
-        			<td>Id Visita</td>
-        			<td><input type="text" name="txtidvisita" id="txtidvisita" value='<c:out value="${nid}"/>'/></td>
-        		</tr>
-        		<tr>
-        			<td>Fecha</td>
-        			<td><input type="date"  name="txtvisfecha" id="txtvisfecha"/></td>
-        		</tr>
-        		<tr>
-        			<td>Hora</td>
-        			<td><input type="text" name="txtvishora" id="txtvishora"/></td>
-        		</tr>
-        		<tr>
-        			<td>Lugar</td>
-        			<td><input type="text" name="txtvislugar" id="txtvislugar"/></td>
-        		</tr>
-        		<tr>
-        			<td>Comentario</td>
-        			<td><input type="text" name="txtviscomentarios" id="txtviscomentarios"/></td>
-        		</tr>
-        		<tr>
-        			<td>Rut cliente</td>
-					<td>
-                    	<select name="txtrutcliente">
-	            			<c:forEach items="${rutclie}" var="rc">
-                    			<option value='<c:out value="${rc.getRutCliente()}" />'><c:out value="${rc.getRutCliente()}"/></option>
-                    		</c:forEach>
-                    	</select>
-                    </td>        		
-                </tr>
-        		<tr>
-        			<td><input type="submit" value="Crear Visita"/></td>
-        		</tr>
-        	</table>
-        </form>
+    <div class="contenedor-listarvisita">
+	        <form id="listarvisita" method="post" action="listarvisita" class="cmxform" id="pagForm">
+	            
+	            <h2 id="titulo-listarvisita">Listar Visitas</h2>
+	            <label for="" id="label-listarvisita">ID Visita</label>
+	            <input type="text" id="input-listarvisita" name="txtidvisita"/>
+	            <label for="" id="label-listarvisita">Fecha de pago</label>
+	            <input type="date" id="input-listarvisita" name="txtvisfecha" placeholder="Fecha de pago" />
+	            <label for="" id="label-listarvisita">Hora</label>
+	            <input type="time" id="txtvishora" name="txtMonto"/>
+	            <label for="" id="label-listarvisita">Lugar</label>
+	            <input type="time" id="listarvisita" name="txtvislugar"/>
+	
+	            <label for="" id="label-listarvisitas">Comentario</label>
+	            <input type="time" id="input-listarvisita" name="txtviscomentarios"/>
+	            <label for="" id="label-listarvisita">Rut Cliente</label>
+	            <select id="input-listarvisita" name="txtrutcliente">
+	                <c:forEach items="${lcli}" var="lc">
+	                    <option value='<c:out value="${lc.getRutCliente()}" />'><c:out value="${lc.getRutCliente()}" /></option>
+	                </c:forEach>
+	            </select>
+	            <input type="submit" id="botonlistarvisita" value="Editar Usuario">
+	        </form>
+    </div>
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>
