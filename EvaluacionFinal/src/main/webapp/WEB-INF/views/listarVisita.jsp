@@ -11,7 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,200;1,300;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">   
     <title>Listar Visita</title>
-
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src='<c:out value="${pageContext.request.contextPath}"/>/resources/js/script.js'></script>
     <link href='<c:out value="${pageContext.request.contextPath}"/>/resources/CSS/estilos.css' rel="stylesheet">
 </head>
 
@@ -61,27 +64,26 @@
 			</c:forEach>
     	</table>
     <div class="contenedor-listarvisita">
-	        <form id="listarvisita" method="post" action="listarvisita" class="cmxform" id="pagForm">
+	        <form id="listarvisita" method="post" action="listarvisita" class="cmxform" id="visForm">
 	            
 	            <h2 id="titulo-listarvisita">Listar Visitas</h2>
-	            <label for="" id="label-listarvisita">ID Visita</label>
+	            <label id="label-listarvisita">ID Visita</label>
 	            <input type="text" id="input-listarvisita" name="txtidvisita"/>
-	            <label for="" id="label-listarvisita">Fecha de pago</label>
+	            <label id="label-listarvisita">Fecha de pago</label>
 	            <input type="date" id="input-listarvisita" name="txtvisfecha" placeholder="Fecha de pago" />
-	            <label for="" id="label-listarvisita">Hora</label>
+	            <label id="label-listarvisita">Hora</label>
 	            <input type="time" id="txtvishora" name="txtMonto"/>
-	            <label for="" id="label-listarvisita">Lugar</label>
+	            <label id="label-listarvisita">Lugar</label>
 	            <input type="time" id="listarvisita" name="txtvislugar"/>
-	
-	            <label for="" id="label-listarvisitas">Comentario</label>
+	            <label id="label-listarvisitas">Comentario</label>
 	            <input type="time" id="input-listarvisita" name="txtviscomentarios"/>
-	            <label for="" id="label-listarvisita">Rut Cliente</label>
+	            <label id="label-listarvisita">Rut Cliente</label>
 	            <select id="input-listarvisita" name="txtrutcliente">
 	                <c:forEach items="${lcli}" var="lc">
 	                    <option value='<c:out value="${lc.getRutCliente()}" />'><c:out value="${lc.getRutCliente()}" /></option>
 	                </c:forEach>
 	            </select>
-	            <input type="submit" id="botonlistarvisita" value="Editar Usuario">
+	            <input type="submit" id="botonlistarvisita" value="Crear Visita">
 	        </form>
     </div>
     <footer>

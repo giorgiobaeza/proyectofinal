@@ -11,7 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,200;1,300;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">   
     <title>Crear Usuario</title>
-
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src='<c:out value="${pageContext.request.contextPath}"/>/resources/js/script.js'></script>
     <link href='<c:out value="${pageContext.request.contextPath}"/>/resources/CSS/estilos.css' rel="stylesheet">
 </head>
 
@@ -36,7 +39,7 @@
         
     </header>
 	    <div class="contenedor-crearusuario">
-	        <form id="crearUsuario" method="post" action="crearUsuarioProcesar" class="cmxform" id="pagForm">
+	        <form id="crearUsuario" method="post" action="crearUsuarioProcesar" class="cmxform" id="usrForm">
 	            
 	            <h2 id="titulo-crearusuario">Crear Usuario</h2>
 	            <label for="" id="label-crearusuario">Nombre</label>
