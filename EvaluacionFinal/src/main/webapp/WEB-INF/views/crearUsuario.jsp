@@ -42,16 +42,16 @@
 	            <label for="" id="label-crearusuario">Nombre</label>
 	            <input type="text" id="input-crearusuario" name="usnombre"/>
 	            <label for="" id="label-crearusuario">Apellido</label>
-	            <input type="text" id="input-crearusuario" name="usapellido" placeholder="Fecha de pago" />
+	            <input type="text" id="input-crearusuario" name="usapellido"/>
 	            <label for="" id="label-crearusuario">Fecha de nacimiento</label>
 	            <input type="date" id="input-crearusuario" name="usfecha"/>
 	            <label for="" id="label-crearusuario">RUT</label>
-	            <input type="text" id="input-crearusuario" name="tipodeusuario"/>
+	            <input type="text" id="input-crearusuario" name="usrun"/>
 	            <label for="" id="label-crearusuario">Tipo de usuario</label>
 	            <select id="input-crearusuario" name="tipousuario">
 	                <option value="cliente">Cliente</option>
 	                <option value="profesional">Profesional</option>
-	                <option value="administrativo">Profesional</option>
+	                <option value="administrativo">Administrativo</option>
 	            </select>
 	
 	            <input type="submit" id="botoncrearusuario" value="Ingresar Usuario">

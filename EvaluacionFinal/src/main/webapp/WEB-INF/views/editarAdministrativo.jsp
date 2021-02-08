@@ -35,44 +35,24 @@
         </svg></div>
         
     </header>
-    <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/procesarEditarAdministrativo' class="cmxform" id="capForm">
-            <table class="cel- tablas-t tablas-e">
-                <tr>
-                	<td>Rut Administrativo</td>
-                	<td><input type="text" name="txtrutadministrativo" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
-                </tr>
-                <tr>
-                    <td>Nombres</td>
-                    <td><input type="text" name="txtadmnombres" value='<c:out value="${adm.getNombres()}"/>'/></td>
-                </tr>
-                <tr>
-                    <td>Apellidos</td>
-                    <td><input type="text" name="txtadmapellidos" value='<c:out value="${adm.getApellidos()}"/>'/></td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td><input type="text" name="txtadmafp" value='<c:out value="${adm.getEmail()}"/>'/></td>
-                </tr>
-				<tr>
-                    <td>Area</td>
-                    <td><input type="text" name="txtadmsistemasalud" value='<c:out value="${adm.getArea()}"/>'/></td>
-                </tr>
-				<tr style="display:none">
-                    <td>Run Usuario</td>
-                    <td><input type="text" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
-                </tr>
-                <tr>
-					<td><input type="submit" value="Ingresar Administrativo"></td>
-					<td>
-						<a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>
-							<button type="button">Volver</button>
-						</a>
-					</td>
-				</tr>
-                </table>
+    <div class="contenedor-editardministrativo">
+        <form id="editaradministrativo" method="post" action="editaradministrativo" class="cmxform" id="pagForm">
+            
+            <h2 id="titulo-editaradministrativo">Crear Administrativo</h2>
+            <label for="" id="label-editaradministrativo">Rut Administrativo</label>
+            <input type="text" id="input-editardministrativo" name="txtrutadministrativo"/>
+            <label for="" id="label-editaradministrativo">Nombres</label>
+            <input type="text" id="input-editaradministrativo" name="txtadmnombres" />
+            <label for="" id="label-editaradministrativo">Aoellidos</label>
+            <input type="text" id="input-editaradministrativo" name="txtadmapellidos"/>
+            <label for="" id="label-editaradministrativos">Email</label>
+            <input type="text" id="input-editaradministrativo" name="txtadmafp"/>
+            <label for="" id="label-editaradministrativos">Area</label>
+            <input type="text" id="input-editaradministrativo" name="txtadmsistemasalud"/>
+
+            <input type="submit" id="botonceditaradministrativo" value="Editar Usuario">
         </form>
-    </fieldset>
+    </div>
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>
