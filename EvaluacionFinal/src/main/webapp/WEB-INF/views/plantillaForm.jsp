@@ -1,24 +1,36 @@
-    <div class="contenedor-crear-capacitacion">
-        <form method="post" action="crearCapacitacionProcesar" class="cmxform" id="capForm">
-            <h2 id="titulo-crearcapacitacion">Crear Capacitacíon</h2>
-            <label id="label-crearcapacitacion">Id Capacitación</label>
-            <input type="text" name="idcapacitacion" id="form-capacitacion" value='<c:out value="${nid}"/>'/>
-            <label id="label-crearcapacitacion">Fecha de Capacitación</label>
-            <input type="date" name="capfecha" id="form-capacitacion"/>
-            <label id="label-crearcapacitacion">Hora de Capacitación</label>
-            <input type="time" name="caphora" id="form-capacitacion"/>
-            <label id="label-crearcapacitacion">Lugar de Capacitación</label>
-            <input type="text" name="caplugar" id="form-capacitacion"/>
-            <label id="label-crearcapacitacion">Duración de Capacitación en minutos</label>
-            <input type="text" name="capduracion" id="form-capacitacion"/>
-            <label id="label-crearcapacitacion">Seleccione Rut de Cliente</label>
-            <select name="cliente_rutcliente" id="form-capacitacion">
+	 	<div class="contenedor-crearpagos">
+        <form id="crearpagos" method="post" action="crearPagosProcesar" class="cmxform" id="pagForm">
+            
+            <h2 id="titulo-crearpagos">Crear Pagos</h2>
+            <label for="" id="label-crearpagos">Id Pagos</label>
+            <input type="text"  id="input-crearpagos" name="txtidPagos" value='<c:out value="${nid}"/>'/>
+            <label for="" id="label-crearpagos">Fecha de pago</label>
+            <input type="date" id="input-crearpagos" name="txtfechaPago" placeholder="Fecha de pago" />
+            <label for="" id="label-crearpagos">Monto de pago</label>
+            <input type="time" id="input-crearpagos" name="txtMonto"/>
+            <label for="" id="label-crearpagos">Mes de Pago</label>
+            <select id="input-crearpagos" name="txtMes">
+                <option>Seleccione una opción</option>
+                <option value="enero">Enero</option>
+                <option value="febrero">Febrero</option>
+                <option value="marzo">Marzo</option>
+                <option value="abril">Abril</option>
+                <option value="mayo">Mayo</option>
+                <option value="junio">Junio</option>
+                <option value="julio">Julio</option>
+                <option value="agosto">Agosto</option>
+                <option value="septiembre">Septiembre</option>
+                <option value="octubre">Octubre</option>
+                <option value="noviembre">Noviembre</option>
+                <option value="diciembre">Diciembre</option>
+            </select>
+            <label for="" id="label-crearpagos">Año de pago</label>
+            <input type="time" id="input-crearpagos" name="txtAnio"/>
+            <label for="" id="label-crearpagos">Rut Cliente</label>
+            <select id="input-crearpagos" name="txtCliente_rutcliente">
                 <c:forEach items="${lcli}" var="lc">
-                    <option value='<c:out value="${lc.getRutCliente()}" />'>
-                        <c:out value="${lc.getRutCliente()}" />
-                    </option>
+                    <option value='<c:out value="${lc.getRutCliente()}" />'><c:out value="${lc.getRutCliente()}" /></option>
                 </c:forEach>
             </select>
-            <input type="submit" value="Ingresar Capacitación" id="boton-crearcapacitacion">
+            <input type="submit" value="Ingresar Pago" id="boton-crearpagos">
         </form>
-    </div>
