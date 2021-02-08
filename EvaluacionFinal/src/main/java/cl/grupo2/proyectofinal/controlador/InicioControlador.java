@@ -31,7 +31,6 @@ public class InicioControlador {
 	    @RequestMapping("/login")
 	    public String login()
 	    {
-	        System.out.println("Inside login");
 	        return "login";
 	    }
 	    

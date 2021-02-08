@@ -7,7 +7,6 @@ import javax.persistence.Id;
 public class DetalleChequeo {
 	
 	private String cumple_observaciones;
-	
 	private int visita_idvisita;
 	@Id
 	private int chequeo_idchequeo;

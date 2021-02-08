@@ -53,8 +53,8 @@
 	 	            <td><c:out value="${lv.getCliente_rutcliente()}" /></td>
 	            
 	            <td>
-					<a href='<c:out value="${pageContext.request.contextPath}"/>/editarCliente/<c:out value="${lu.getRun()}"/>'>
-						<button>Editar</button>
+					<a href='<c:out value="${pageContext.request.contextPath}"/>/listarDetalleChequeo/<c:out value="${lv.getIdvisita()}"/>'>
+						<button>Chequeos</button>
 					</a>							
 				</td>
 				</tr>
