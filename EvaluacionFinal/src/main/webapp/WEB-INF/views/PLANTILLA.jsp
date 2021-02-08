@@ -36,9 +36,7 @@
     
     
     
-    
-    
-    
+
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>
