@@ -35,41 +35,28 @@
         </svg></div>
         
     </header>
-        <form method="post" action="crearUsuarioProcesar" class="cmxform" id="capForm">
-            <table class="cel- tablas-t tablas-e">
-                <tr>
-                	<td>Nombre</td>
-                	<td><input type="text" name="usnombre" id="usnombre"/></td>
-                </tr>
-                <tr>
-                    <td>Apellido</td>
-                    <td><input type="text" name="usapellido" id="usapellido"/></td>
-                </tr>
-                <tr>
-                    <td>Fecha de Nacimiento</td>
-                    <td><input type="text" name="usfecha" id="usfecha"/></td>
-                </tr>
-                <tr>
-                    <td>R.U.N.</td>
-                    <td><input type="text" name="usrun" id="usrun"/></td>
-                </tr>
-                <tr>
-                    <td>Tipo de Usuario</td>
-                    <td>
-                    	<select name="tipousuario">
-                    		<option>seleccione una opción</option>
-                    		<option value="cliente">Cliente</option>
-                    		<option value="profesional">Profesional</option>
-                    		<option value="administrativo">Administrativo</option>
-                    	</select>
-                    </td>
-                </tr>
-				<tr>
-				<tr>
-					<td><input type="submit" value="Ingresar Usuario"></td>
-				</tr>
-                </table>
-        </form>
+	    <div class="contenedor-crearusuario">
+	        <form id="crearUsuario" method="post" action="crearUsuarioProcesar" class="cmxform" id="pagForm">
+	            
+	            <h2 id="titulo-crearusuario">Crear Usuario</h2>
+	            <label for="" id="label-crearusuario">Nombre</label>
+	            <input type="text" id="input-crearusuario" name="usnombre"/>
+	            <label for="" id="label-crearusuario">Apellido</label>
+	            <input type="text" id="input-crearusuario" name="usapellido" placeholder="Fecha de pago" />
+	            <label for="" id="label-crearusuario">Fecha de nacimiento</label>
+	            <input type="date" id="input-crearusuario" name="usfecha"/>
+	            <label for="" id="label-crearusuario">RUT</label>
+	            <input type="text" id="input-crearusuario" name="tipodeusuario"/>
+	            <label for="" id="label-crearusuario">Tipo de usuario</label>
+	            <select id="input-crearusuario" name="tipousuario">
+	                <option value="cliente">Cliente</option>
+	                <option value="profesional">Profesional</option>
+	                <option value="administrativo">Profesional</option>
+	            </select>
+	
+	            <input type="submit" id="botoncrearusuario" value="Ingresar Usuario">
+	        </form>
+    </div>
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>
