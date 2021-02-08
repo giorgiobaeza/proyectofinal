@@ -43,4 +43,31 @@ public class InicioControlador {
 	        }
 	        return "redirect:/login?logout"; 
 	    }
+	    
+	    @RequestMapping("/menuInicio")
+	    public String validarsesion() {
+	        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	        String nombre = auth.getName();
+	        if(nombre.equalsIgnoreCase("saul")) {
+
+	            return "sesionCliente";
+
+	        }else if (nombre.equalsIgnoreCase("jorge")) {
+	            return "sesionAdministrativo";
+	        }
+	        else if (nombre.equalsIgnoreCase("anton")){
+	            return "sesionProfesional"; 
+	        }else {
+
+	             
+	           return "login";
+
+	        }
+	    }
+	    
+	    @RequestMapping("/customAaccessDenied")
+	    public String Forbidden() {
+			return "accesDenied";
+	    	
+	    }
 }
