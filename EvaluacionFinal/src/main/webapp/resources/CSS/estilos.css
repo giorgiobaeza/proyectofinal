@@ -492,6 +492,214 @@ input[type=submit] {
     margin-top: 30px;
 }
 
+/* ============================================================ */
+/* ============================ Login ========================= */
+/* ============================================================ */
+
+.contenedor-login {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+form #login{ 
+    width: 50%;
+    margin: auto;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.body-imagen {
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;    
+}
+.imagen-login {
+    width: 50%;
+    display: flex;
+}
+
+.titulo-login {
+    max-width: 400px;
+    text-align: center;
+    font-size: 45px;
+    color: #f78913;
+    padding: 20px 0 8px 0;
+}
+
+form p { 
+    font-size: 20px;
+    max-width: 400px;
+    text-align: justify;
+    padding: 0px 0 25px 0;
+}
+
+
+#label-login {
+    font-size: 20px;
+    max-width: 400px;
+    display: flex;
+    padding: 0px 0 0px 20px;
+    color: #3a6da7;
+}
+
+
+
+#boton-login {
+    background: 3a6da7;
+    color: #f2f2f2;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+/* ============================================================ */
+/* ======================== Crear Pagos ======================= */
+/* ============================================================ */
+
+.contenedor-crearpagos {
+    max-width: 400px;
+    margin: auto;
+    padding: 40px 0 60px 0;
+    
+}
+
+.body-imagen {
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;    
+}
+
+#titulo-crearpagos {
+    max-width: 400px;
+    text-align: center;
+    font-size: 45px;
+    color: #f78913;
+    padding: 20px 0;
+}
+
+#label-crearpagos {
+    font-size: 20px;
+    max-width: 400px;
+    display: flex;
+    padding: 6px 0 4px 12px;
+    color: #3a6da7;
+}
+
+#input-crearpagos {
+    font-size: 16px;
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 16px;
+    border: none;
+    background-color: #ecf4ff;
+    box-sizing: border-box;
+}
+
+#form-crearpagos {
+    
+    background-color: #ecf4ff;
+    font-size: 16px;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    box-sizing: border-box;    
+}
+
+#boton-crearpagos {
+    background: #3a6da7;
+    color: #f2f2f2;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
