@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,200;1,300;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">   
     <title>Listar Usuario</title>
+    <script src="https://kit.fontawesome.com/1d5353b7f3.js" crossorigin="anonymous"></script>
 
     <link href='<c:out value="${pageContext.request.contextPath}"/>/resources/CSS/estilos.css' rel="stylesheet">
 </head>
@@ -28,7 +29,7 @@
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/contacto'>Contacto</a></li>
             </ul>
         </nav>
-        <div class="wave-2" style="height: 150px; overflow: hidden;"></div>
+        
         
     </header>
     <fieldset class="cel- agrupar-t agrupar-e">

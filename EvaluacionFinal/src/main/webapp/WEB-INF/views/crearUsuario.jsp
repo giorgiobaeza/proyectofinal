@@ -39,7 +39,7 @@
         
     </header>
 	    <div class="contenedor-crearusuario">
-	        <form id="crearUsuario" method="post" action="crearUsuarioProcesar" class="cmxform" id="usrForm">
+	        <form  method="post" action="crearUsuarioProcesar" class="cmxform" id="usrForm">
 	            
 	            <h2 id="titulo-crearusuario">Crear Usuario</h2>
 	            <label for="" id="label-crearusuario">Nombre</label>
@@ -52,6 +52,7 @@
 	            <input type="text" id="input-crearusuario" name="usrun"/>
 	            <label for="" id="label-crearusuario">Tipo de usuario</label>
 	            <select id="input-crearusuario" name="tipousuario">
+  	                <option value="default">Seleccionar una opción</option>
 	                <option value="cliente">Cliente</option>
 	                <option value="profesional">Profesional</option>
 	                <option value="administrativo">Administrativo</option>
