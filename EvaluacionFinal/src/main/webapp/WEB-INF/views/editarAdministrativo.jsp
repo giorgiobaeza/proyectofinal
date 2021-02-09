@@ -43,11 +43,11 @@
             <input type="text" id="input-editardministrativo" name="txtrutadministrativo"/>
             <label for="" id="label-editaradministrativo">Nombres</label>
             <input type="text" id="input-editaradministrativo" name="txtadmnombres" />
-            <label for="" id="label-editaradministrativo">Aoellidos</label>
+            <label for="" id="label-editaradministrativo">Apellidos</label>
             <input type="text" id="input-editaradministrativo" name="txtadmapellidos"/>
-            <label for="" id="label-editaradministrativos">Email</label>
+            <label for="" id="label-editaradministrativos">Afp</label>
             <input type="text" id="input-editaradministrativo" name="txtadmafp"/>
-            <label for="" id="label-editaradministrativos">Area</label>
+            <label for="" id="label-editaradministrativos">Sistema de Salud</label>
             <input type="text" id="input-editaradministrativo" name="txtadmsistemasalud"/>
 
             <input type="submit" id="botonceditaradministrativo" value="Editar Usuario">

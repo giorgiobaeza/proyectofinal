@@ -710,7 +710,7 @@ $(document).ready(function(){
     });
     
 });
-//validacion formulario editar administrativo
+//validacion formulario editarAdministrativo.jsp
 $(document).ready(function(){
     $.validator.addMethod("valueNotEquals", function(value, element, arg){
         return arg !== value;
@@ -718,13 +718,13 @@ $(document).ready(function(){
 
     $('#admForm').validate({
         rules: {
-            run: {
+            txtrutadministrativo: {
                 required: true,
                 rut: true,
                
             },
-            nombre: "required",
-            apellido: "required",
+            txtadmnombres: "required",
+            txtadmapellidos: "required",
             email: "required",
             Area: "required",
               
