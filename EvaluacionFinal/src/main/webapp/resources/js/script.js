@@ -218,7 +218,7 @@ $(document).ready(function(){
     });
 });
 
-//validacion formulario Contacto
+//validacion formulario Contacto.jsp
 $(document).ready(function(){
     $.validator.addMethod("valueNotEquals", function(value, element, arg){
         return arg !== value;
@@ -420,3 +420,91 @@ $(document).ready(function(){
         }
     });
 });
+
+//validaciones para crearCapacitacion.jsp
+$(document).ready(function(){
+
+    $.validator.addMethod("valueNotEquals", function(value, element, arg){
+        return arg !== value;
+       }, "Value must not equal arg.")
+ 
+    
+    $('#capForm').validate({
+        rules: {
+           
+            idcapacitacion: {
+                required: true,
+                digits: true,
+                maxlength: 9,
+                min: 1
+            },                
+                       
+            capfecha: "required",
+            
+            caphora: "required",
+
+            caplugar:  {
+                required: true,
+                minlength: 1,
+                maxlength: 	50
+            },
+
+            capduracion:  {
+                required: true,
+                digits: true,
+                maxlength: 3,
+                min: 1
+			},
+
+            cliente_rutcliente: {
+                required: true,
+                digits: true,
+                maxlength: 9,
+                min: 1
+            }, 
+                                            
+           
+        },
+
+        messages: {
+            idcapacitacion: {
+                required: "Este es un campo obligatorio.",
+                digits: "Este campo solo acepta dígitos.",
+                maxlength: "Excede numero máximo de dígitos."
+            },
+
+            capfecha: {
+                required: "Este es un campo obligatorio."
+            },    
+            
+            caphora: {
+                required: "Este es un campo obligatorio."
+            },    
+           
+            caplugar:  {
+                required: "Este es un campo obligatorio.",
+                minlength: "Este es un campo obligatorio.",
+                maxlength: "Excede numero máximo de caracteres."
+            },
+
+            capduracion:  {
+                required: "Este es un campo obligatorio.",
+                digits: "Este campo solo acepta dígitos.",
+                maxlength: "Excede numero máximo de dígitos."
+            },
+
+
+            cliente_rutcliente: {
+                required: "Este es un campo obligatorio.",
+                digits: "Este campo solo acepta dígitos.",
+                maxlength: "Excede numero máximo de dígitos."
+            },   
+            
+
+        }
+
+    });
+    
+});
+
+
