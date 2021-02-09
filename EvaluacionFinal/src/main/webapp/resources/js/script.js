@@ -636,111 +636,7 @@ $(document).ready(function(){
     
 });
 
-//validaciones para crearUsuario.jsp
-$(document).ready(function(){
 
-    $.validator.addMethod("valueNotEquals", function(value, element, arg){
-        return arg !== value;
-       }, "Value must not equal arg.")
- 
-    
-    $('#usrForm').validate({
-        rules: {
-           
-            usnombre: {
-                required: true,
-                minlength: 1,
-                maxlength: 	50
-            },                
-                       
-            usapellido: {
-                required: true,
-                minlength: 1,
-                maxlength: 	50
-            },      
-            
-            usfecha: "required",
-
-            usrun:  {
-                required: true,
-                digits: true,
-                maxlength: 9,
-                min: 1
-            },
-
-            tipousuario:  {
-                required: true,
-                minlength: 1,
-                maxlength: 	50
-            },                                                 
-           
-        },
-
-        messages: {
-            usnombre: {
-                required: "Este es un campo obligatorio.",
-                minlength: "Este es un campo obligatorio.",
-                maxlength: "Excede numero máximo de caracteres."
-            },
-
-            usapellido: {
-                required: "Este es un campo obligatorio.",
-                minlength: "Este es un campo obligatorio.",
-                maxlength: "Excede numero máximo de caracteres."
-            },    
-            
-            usfecha: {
-                required: "Este es un campo obligatorio."
-            },    
-           
-            usrun:  {
-                required: "Este es un campo obligatorio.",
-                digits: "Este campo solo acepta dígitos.",
-                maxlength: "Excede numero máximo de dígitos."
-            },
-
-            tipousuario:  {
-                required: "Este es un campo obligatorio.",
-                minlength: "Este es un campo obligatorio.",
-                maxlength: "Excede numero máximo de caracteres."
-            },
-            
-        }	
-
-    });
-    
-});
-//validacion formulario editarAdministrativo.jsp
-$(document).ready(function(){
-    $.validator.addMethod("valueNotEquals", function(value, element, arg){
-        return arg !== value;
-       }, "Value must not equal arg.")
-
-    $('#admForm').validate({
-        rules: {
-            txtrutadministrativo: {
-                required: true,
-                rut: true,
-               
-            },
-            txtadmnombres: "required",
-            txtadmapellidos: "required",
-            email: "required",
-            Area: "required",
-              
-        },
-        messages: {
-            run: {
-                required: "Este es un campo obligatorio.",
-                rut: "El numero ingresado no corresponde a un rut real",
-            },
-            nombre: "Este es un campo obligatorio.",
-            apellido: "Este es un campo obligatorio.",         
-            email: "Este es un campo obligatorio.",
-            Area: "Este es un campo obligatorio.",
-        }
-    });
-});
 
 $(document).ready(function(){
 
@@ -897,6 +793,113 @@ $(document).ready(function(){
             txtvislugar: "Este es un campo obligatorio.", 
             txtviscomentarios: "Este es un campo obligatorio.", 
             txtrutcliente: "Este es un campo obligatorio.",
+        }
+    });
+});
+
+//validaciones para crearUsuario.jsp
+$(document).ready(function(){
+
+    $.validator.addMethod("valueNotEquals", function(value, element, arg){
+        return arg !== value;
+       }, "Value must not equal arg.")
+ 
+    
+    $('#usrForm').validate({
+        rules: {
+           
+            usnombre: {
+                required: true,
+                minlength: 1,
+                maxlength: 	50
+            },                
+                       
+            usapellido: {
+                required: true,
+                minlength: 1,
+                maxlength: 	50
+            },      
+            
+            usfecha: "required",
+
+            usrun:  {
+                required: true,
+                digits: true,
+                maxlength: 9,
+                min: 1
+            },
+
+            tipousuario:  {
+                required: true,
+                minlength: 1,
+                maxlength: 	50
+            },                                                 
+           
+        },
+
+        messages: {
+            usnombre: {
+                required: "Este es un campo obligatorio.",
+                minlength: "Este es un campo obligatorio.",
+                maxlength: "Excede numero máximo de caracteres."
+            },
+
+            usapellido: {
+                required: "Este es un campo obligatorio.",
+                minlength: "Este es un campo obligatorio.",
+                maxlength: "Excede numero máximo de caracteres."
+            },    
+            
+            usfecha: {
+                required: "Este es un campo obligatorio."
+            },    
+           
+            usrun:  {
+                required: "Este es un campo obligatorio.",
+                digits: "Este campo solo acepta dígitos.",
+                maxlength: "Excede numero máximo de dígitos."
+            },
+
+            tipousuario:  {
+                required: "Este es un campo obligatorio.",
+                minlength: "Este es un campo obligatorio.",
+                maxlength: "Excede numero máximo de caracteres."
+            },
+            
+        }	
+
+    });
+    
+});
+
+//validacion formulario editarAdministrativo.jsp
+$(document).ready(function(){
+    $.validator.addMethod("valueNotEquals", function(value, element, arg){
+        return arg !== value;
+       }, "Value must not equal arg.")
+
+    $('#admForm').validate({
+        rules: {
+            txtrutadministrativo: {
+                required: true,
+                rut: true,
+               
+            },
+            txtadmnombres: "required",
+            txtadmapellidos: "required",
+            email: "required",
+            Area: "required",
+              
+        },
+        messages: {
+            run: {
+                required: "Este es un campo obligatorio.",
+                rut: "El numero ingresado no corresponde a un rut real",
+            },
+            nombre: "Este es un campo obligatorio.",
+            apellido: "Este es un campo obligatorio.",         
+            email: "Este es un campo obligatorio.",
+            Area: "Este es un campo obligatorio.",
         }
     });
 });
