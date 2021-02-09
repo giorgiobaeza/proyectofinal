@@ -602,7 +602,7 @@ form p {
     box-sizing: border-box;
 }
 
-#form-crearpagos {
+#input-crearpagos {
     
     background-color: #ecf4ff;
     font-size: 16px;
@@ -621,7 +621,280 @@ form p {
     margin-top: 30px;
 }
 
+/* ============================================================ */
+/* ======================== Crear Usuarios ==================== */
+/* ============================================================ */
 
+.contenedor-crearusuarios {
+
+    max-width: 1300px;
+    margin: auto;
+    padding: 40px 0 60px 0;
+    
+}
+
+#crearUsuario {
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    padding: 40px 0;
+    
+
+}
+
+.body-imagen {
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute; 
+       
+}
+
+#titulo-crearUsuario {
+    max-width: 400px;
+    text-align: center;
+    font-size: 45px;
+    color: #f78913;
+    padding: 20px 0;
+}
+
+#label-crearusuario {
+    font-size: 20px;
+    max-width: 400px;
+    display: flex;
+    padding: 6px 0 4px 12px;
+    color: #3a6da7;
+}
+
+#input-crearusuario{
+    font-size: 16px;
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 16px;
+    border: none;
+    background-color: #ecf4ff;
+    box-sizing: border-box;
+}
+
+#input-crearpagos {
+    
+    background-color: #ecf4ff;
+    font-size: 16px;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    box-sizing: border-box;    
+}
+
+#botoncrearusuario {
+    background: #3a6da7;
+    color: #f2f2f2;
+    text-align: center;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+/* ============================================================ */
+/* ===================== Editar Administrativo ================ */
+/* ============================================================ */
+
+.contenedor-editardministrativo {
+
+    max-width: 1300px;
+    margin: auto;
+    padding: 40px 0 60px 0;
+    
+}
+
+#editaradministrativo {
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    padding: 40px 0;
+    
+
+}
+
+.body-imagen {
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute; 
+       
+}
+
+#titulo-editaradministrativo {
+    max-width: 400px;
+    text-align: center;
+    font-size: 45px;
+    color: #f78913;
+    padding: 20px 0;
+}
+
+#label-editaradministrativo {
+    font-size: 20px;
+    max-width: 400px;
+    display: flex;
+    padding: 6px 0 4px 12px;
+    color: #3a6da7;
+}
+
+#input-editaradministrativo{
+    font-size: 16px;
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 16px;
+    border: none;
+    background-color: #ecf4ff;
+    box-sizing: border-box;
+}
+
+#botonceditaradministrativo {
+    background: #3a6da7;
+    color: #f2f2f2;
+    text-align: center;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+/* ============================================================ */
+/* ===================== Editar cliente ================ */
+/* ============================================================ */
+
+.contenedor-editarcliente {
+
+    max-width: 1300px;
+    margin: auto;
+    padding: 40px 0 60px 0;
+    
+}
+
+#editarcliente {
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.body-imagen {
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute; 
+       
+}
+
+#titulo-editarcliente {
+    max-width: 400px;
+    text-align: center;
+    font-size: 45px;
+    color: #f78913;
+    padding: 20px 0;
+}
+
+#label-editarcliente {
+    font-size: 20px;
+    max-width: 400px;
+    display: flex;
+    padding: 6px 0 4px 12px;
+    color: #3a6da7;
+}
+
+#input-editarcliente{
+    font-size: 16px;
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 16px;
+    border: none;
+    background-color: #ecf4ff;
+    box-sizing: border-box;
+}
+
+#botoneditarcliente {
+    background: #3a6da7;
+    color: #f2f2f2;
+    text-align: center;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+/* ============================================================ */
+/* ===================== Editar profesional =================== */
+/* ============================================================ */
+
+.contenedor-editarprofesional {
+
+    max-width: 1300px;
+    margin: auto;
+    padding: 40px 0 60px 0;
+    
+}
+
+#editarprofesional {
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.body-imagen {
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute; 
+       
+}
+
+#titulo-editarprofesional {
+    max-width: 400px;
+    text-align: center;
+    font-size: 45px;
+    color: #f78913;
+    padding: 20px 0;
+}
+
+#label-editarprofesional {
+    font-size: 20px;
+    max-width: 400px;
+    display: flex;
+    padding: 6px 0 4px 12px;
+    color: #3a6da7;
+}
+
+#input-editarprofesional {
+    font-size: 16px;
+    max-width: 400px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 16px;
+    border: none;
+    background-color: #ecf4ff;
+    box-sizing: border-box;
+}
+
+#botoneditarprofesional {
+    background: #3a6da7;
+    color: #f2f2f2;
+    text-align: center;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 40px;
+}
 
 
 
