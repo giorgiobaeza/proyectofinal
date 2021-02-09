@@ -28,11 +28,7 @@
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/contacto'>Contacto</a></li>
             </ul>
         </nav>
-        <div class="wave-2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-            style="height: 100%; width: 100%;">
-            <path d="M-1.41,131.73 C169.01,195.88 329.85,35.03 518.90,148.52 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: rgb(255, 255, 255);"></path>
-        </svg></div>
+        <div class="wave-2" style="height: 150px; overflow: hidden;"></div>
         
     </header>
     <fieldset class="cel- agrupar-t agrupar-e">
