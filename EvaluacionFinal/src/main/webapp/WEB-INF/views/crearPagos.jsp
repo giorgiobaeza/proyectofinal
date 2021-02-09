@@ -36,17 +36,19 @@
         </svg></div>
         
     </header>
-          	 <div class="contenedor-crearpagos">
-        <form id="crearpagos" method="post" action="crearPagosProcesar" class="cmxform" id="pagForm">
+    
+    
+    <div class="contenedor-crearpagos">
+        <form id="crearpagos" method="post" action="crearpagos" class="cmxform" id="pagForm">
             
             <h2 id="titulo-crearpagos">Crear Pagos</h2>
-            <label for="" id="label-crearpagos">Id Pagos</label>
-            <input type="text"  id="input-crearpagos" name="txtidPagos" value='<c:out value="${nid}"/>'/>
+            <label for="" id="label-crear-capacitacion">ID pagos</label>
+            <input type="text" id="label-crearpagos" name="txtidPagos" value='<c:out value="${nid}"/>'/>
             <label for="" id="label-crearpagos">Fecha de pago</label>
-            <input type="date" id="input-crearpagos" name="txtfechaPago" placeholder="Fecha de pago" />
+            <input type="date" id="label-crearpagos" name="txtfechaPago"/>
             <label for="" id="label-crearpagos">Monto de pago</label>
-            <input type="time" id="input-crearpagos" name="txtMonto"/>
-            <label for="" id="label-crearpagos">Mes de Pago</label>
+            <input type="text" id="label-crearpagos" name="caphora"/>
+            <label for="" id="label-crearpagos">Mes de pago</label>
             <select id="input-crearpagos" name="txtMes">
                 <option>Seleccione una opción</option>
                 <option value="enero">Enero</option>
@@ -63,17 +65,21 @@
                 <option value="diciembre">Diciembre</option>
             </select>
             <label for="" id="label-crearpagos">Año de pago</label>
-            <input type="time" id="input-crearpagos" name="txtAnio"/>
-            <label for="" id="label-crearpagos">Rut Cliente</label>
+            <input type="text" id="label-crearpagos" name="txtAnio"/>
+            <label for="" id="label-crearpagos">Rut cliente</label>
             <select id="input-crearpagos" name="txtCliente_rutcliente">
                 <c:forEach items="${lcli}" var="lc">
                     <option value='<c:out value="${lc.getRutCliente()}" />'><c:out value="${lc.getRutCliente()}" /></option>
                 </c:forEach>
             </select>
+
             <input type="submit" value="Ingresar Pago" id="boton-crearpagos">
-            
+
         </form>
-        	</div>
+    </div>
+    
+ 
+
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>

@@ -34,19 +34,20 @@
         
     </header>
     <div class="contenedor-crear-capacitacion">
-        <form method="post" action="crearCapacitacionProcesar" class="cmxform" id="capForm">
-            <h2 id="titulo-crearcapacitacion">Crear Capacitacíon</h2>
-            <label id="label-crearcapacitacion">Id Capacitación</label>
-            <input type="text" name="idcapacitacion" id="form-capacitacion" value='<c:out value="${nid}"/>'/>
-            <label id="label-crearcapacitacion">Fecha de Capacitación</label>
-            <input type="date" name="capfecha" id="form-capacitacion"/>
-            <label id="label-crearcapacitacion">Hora de Capacitación</label>
-            <input type="time" name="caphora" id="form-capacitacion"/>
-            <label id="label-crearcapacitacion">Lugar de Capacitación</label>
-            <input type="text" name="caplugar" id="form-capacitacion"/>
-            <label id="label-crearcapacitacion">Duración de Capacitación en minutos</label>
-            <input type="text" name="capduracion" id="form-capacitacion"/>
-            <label id="label-crearcapacitacion">Seleccione Rut de Cliente</label>
+        <form id="contenedor-crear-capacitacion" method="post" action="contenedor-crear-capacitacion" class="cmxform" id="pagForm">
+            
+            <h2 id="contenedor-crear-capacitacion">Crear Capacitación</h2>
+            <label for="" id="label-crear-capacitacion">ID capacitación</label>
+            <input type="text" id="label-crear-capacitacion" name="idcapacitacion" value='<c:out value="${nid}"/>'/>
+            <label for="" id="label-crear-capacitacion">Fecha de capacitación</label>
+            <input type="date" id="label-crear-capacitacion" name="capfecha"/>
+            <label for="" id="label-editarprofesional">Hora de capacitación</label>
+            <input type="time" id="label-crear-capacitacion" name="caphora"/>
+            <label for="" id="label-crear-capacitacion">Lugar de capacitación</label>
+            <input type="text" id="input-editarprofesional" name="txtprotitulo"/>
+            <label for="" id="llabel-crear-capacitacion">Duración de capacitación</label>
+            <input type="text" id="label-crear-capacitacion" name=capduracion"/>
+            <label for="" id="label-crear-capacitacion">RUT de cliente</label>
             <select name="cliente_rutcliente" id="form-capacitacion">
                 <c:forEach items="${lcli}" var="lc">
                     <option value='<c:out value="${lc.getRutCliente()}" />'>
@@ -54,7 +55,9 @@
                     </option>
                 </c:forEach>
             </select>
-            <input type="submit" value="Ingresar Capacitación" id="boton-crearcapacitacion">
+
+            <input type="submit" id="botonecrearcapacitacion" value="Crear Capacitación">
+
         </form>
     </div>
     
