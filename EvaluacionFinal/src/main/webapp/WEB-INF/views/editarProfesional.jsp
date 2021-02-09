@@ -40,18 +40,20 @@
         <form id="editarprofesional" method="post" action="editarprofesional" class="cmxform" id="pagForm">
             
             <h2 id="titulo-editarprofesional">Editar Profesional</h2>
+            <label for="" id="label-editarprofesional">Rut Profesional</label>
+            <input type="text" id="input-editarprofesional" name="txtrutprofesional" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/>/>
             <label for="" id="label-editarprofesional">Nombres</label>
-            <input type="text" id="input-editarprofesional" name="txtpronombres"/>
+            <input type="text" id="input-editarprofesional" name="txtpronombres" value='<c:out value="${pro.getNombres()}"/>'/>/>
             <label for="" id="label-editarprofesional">Apellidos</label>
-            <input type="text" id="input-editarprofesional" name="txtproapellidos"/>
+            <input type="text" id="input-editarprofesional" name="txtproapellidos" value='<c:out value="${pro.getApellidos()}"/>'/>/>
             <label for="" id="label-editarprofesional">Teléfono</label>
-            <input type="text" id="input-editarprofesional" name="txtprotelefono"/>
+            <input type="text" id="input-editarprofesional" name="txtprotelefono" value='<c:out value="${pro.getTelefono()}"/>'/>/>
             <label for="" id="label-editarprofesional">Título profesional</label>
-            <input type="text" id="input-editarprofesional" name="txtprotitulo"/>
+            <input type="text" id="input-editarprofesional" name="txtprotitulo" value='<c:out value="${pro.getTituloprofesional()}"/>'/>/>
             <label for="" id="label-editarprofesional">Proyecto</label>
-            <input type="text" id="input-editarprofesional" name=txtproproyecto"/>
+            <input type="text" id="input-editarprofesional" name="txtproproyecto" value='<c:out value="${pro.getProyecto()}"/>'/>/>
             <label for="" id="label-editarprofesional">RUT</label>
-            <input type="text" id="input-editarprofesional" name=xtusuariorun"/>
+            <input type="text" id="input-editarprofesional" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/>/>
 
 
 

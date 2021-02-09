@@ -40,16 +40,16 @@
             
             <h2 id="titulo-editaradministrativo">Crear Administrativo</h2>
             <label for="" id="label-editaradministrativo">Rut Administrativo</label>
-            <input type="text" id="input-editardministrativo" name="txtrutadministrativo"/>
+            <input type="text" id="input-editardministrativo" name="txtrutadministrativo" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/>/>
             <label for="" id="label-editaradministrativo">Nombres</label>
-            <input type="text" id="input-editaradministrativo" name="txtadmnombres" />
+            <input type="text" id="input-editaradministrativo" name="txtadmnombres" value='<c:out value="${adm.getNombres()}"/>'/>/>
             <label for="" id="label-editaradministrativo">Apellidos</label>
-            <input type="text" id="input-editaradministrativo" name="txtadmapellidos"/>
+            <input type="text" id="input-editaradministrativo" name="txtadmapellidos" value='<c:out value="${adm.getApellidos()}"/>'/>/>
             <label for="" id="label-editaradministrativos">Afp</label>
-            <input type="text" id="input-editaradministrativo" name="txtadmafp"/>
+            <input type="text" id="input-editaradministrativo" name="txtadmafp" value='<c:out value="${adm.getEmail()}"/>'/>/>
             <label for="" id="label-editaradministrativos">Sistema de Salud</label>
-            <input type="text" id="input-editaradministrativo" name="txtadmsistemasalud"/>
-
+            <input type="text" id="input-editaradministrativo" name="txtadmsistemasalud" value='<c:out value="${adm.getArea()}"/>'/>/>
+			<input style="display:none" type="text" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/>
             <input type="submit" id="botonceditaradministrativo" value="Editar Usuario">
         </form>
     </div>

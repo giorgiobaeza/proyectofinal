@@ -47,7 +47,7 @@
             <label for="" id="label-crearpagos">Fecha de pago</label>
             <input type="date" id="label-crearpagos" name="txtfechaPago"/>
             <label for="" id="label-crearpagos">Monto de pago</label>
-            <input type="text" id="label-crearpagos" name="caphora"/>
+            <input type="text" id="label-crearpagos" name="txtMonto"/>
             <label for="" id="label-crearpagos">Mes de pago</label>
             <select id="input-crearpagos" name="txtMes">
                 <option>Seleccione una opción</option>

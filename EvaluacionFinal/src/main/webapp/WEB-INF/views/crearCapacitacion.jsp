@@ -44,9 +44,9 @@
             <label for="" id="label-editarprofesional">Hora de capacitación</label>
             <input type="time" id="label-crear-capacitacion" name="caphora"/>
             <label for="" id="label-crear-capacitacion">Lugar de capacitación</label>
-            <input type="text" id="input-editarprofesional" name="txtprotitulo"/>
+            <input type="text" id="input-editarprofesional" name="caplugar"/>
             <label for="" id="llabel-crear-capacitacion">Duración de capacitación</label>
-            <input type="text" id="label-crear-capacitacion" name=capduracion"/>
+            <input type="text" id="label-crear-capacitacion" name="capduracion"/>
             <label for="" id="label-crear-capacitacion">RUT de cliente</label>
             <select name="cliente_rutcliente" id="form-capacitacion">
                 <c:forEach items="${lcli}" var="lc">
