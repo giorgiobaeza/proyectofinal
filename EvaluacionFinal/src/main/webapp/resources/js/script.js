@@ -1,3 +1,41 @@
+//función para validar rut
+function validaRut(campo){
+    if ( campo.length == 0 ){ return false; }
+    if ( campo.length < 8 ){ return false; }
+
+    campo = campo.replace('-','')
+    campo = campo.replace(/\./g,'')
+    var suma = 0;
+    var caracteres = "1234567890kK";
+    var contador = 0;    
+    for (var i=0; i < campo.length; i++){
+        u = campo.substring(i, i + 1);
+        if (caracteres.indexOf(u) != -1)
+        contador ++;
+    }
+    if ( contador==0 ) { return false }
+    
+    var rut = campo.substring(0,campo.length-1)
+    var drut = campo.substring( campo.length-1 )
+    var dvr = '0';
+    var mul = 2;
+    
+    for (i= rut.length -1 ; i >= 0; i--) {
+        suma = suma + rut.charAt(i) * mul
+                if (mul == 7) 	mul = 2
+                else	mul++
+    }
+    res = suma % 11
+    if (res==1)		dvr = 'k'
+                else if (res==0) dvr = '0'
+    else {
+        dvi = 11-res
+        dvr = dvi + ""
+    }
+    if ( dvr != drut.toLowerCase() ) { return false; }
+    else { return true; }
+}
+
 
 //validaciones para crearCapacitacion.jsp
 $(document).ready(function(){
@@ -86,60 +124,59 @@ $(document).ready(function(){
 });
 
 
-$(document).ready(function(){
-
-    //validacion para formulario editar cliente
+//validacion para formulario editarCliente.jsp
     $.validator.addMethod("valueNotEquals", function(value, element, arg){
         return arg !== value;
        }, "Value must not equal arg.")
 
     $('#cliForm').validate({
         rules: {
-            run: {
+            txtrutCliente: {
                 required: true,
                 rut: true,
             },
-            nombre: "required",
-            apellido: "required",
-            telefono: {
+            txtcliNombres: "required",
+            txtcliApellidos: "required",
+            txtcliTelefono: {
                 required: true,
-                maxlength: 9
+                maxlength: 11
             },
-            afp: "required",
-            sissalud: {
+            
+            txtcliAfp: "required",
+            txtcliSistemaSalud: {
                 valueNotEquals: "default"
             },
-            direc: "required",
-            comuna: "required",
-            edad: {
+            txtcliDireccion: "required",
+            txtcliComuna: "required",
+            txtcliEdad: {
                 required: true,
                 maxlength: 2
             },
         },
         messages: {
-            run: {
+            txtrutCliente: {
                 required: "Este es un campo obligatorio.",
                 maxlength: "Excede numero máximo de caracteres."
             },
-            nombre: "Este es un campo obligatorio.",
-            apellido: "Este es un campo obligatorio.",
-            telefono: {
+            txtcliNombres: "Este es un campo obligatorio.",
+            txtcliApellidos: "Este es un campo obligatorio.",
+            txtcliTelefono: {
                 required: "Este es un campo obligatorio.",
                 maxlength: "Excede numero máximo de caracteres."
             },
-            afp: "Este es un campo obligatorio.",
-            sissalud: {
+            txtcliAfp: "Este es un campo obligatorio.",
+            txtcliSistemaSalud: {
                 valueNotEquals: "Seleccione una opción"
             },
-            direc: "Este es un campo obligatorio.",
-            comuna: "Este es un campo obligatorio.",
-            edad: {
+            txtcliDireccion: "Este es un campo obligatorio.",
+            txtcliComuna: "Este es un campo obligatorio.",
+            txtcliEdad: {
                 required: "Este es un campo obligatorio.",
                 maxlength: "Excede numero máximo de caracteres."
             },
         }
-    });
 });
+
 
 //validacion formulario editar profesional
 $(document).ready(function(){
@@ -344,6 +381,42 @@ $(document).ready(function(){
             apellido: "Este es un campo obligatorio.",         
             email: "Este es un campo obligatorio.",
             Area: "Este es un campo obligatorio.",
+        }
+    });
+});
+
+//validacion formulario crearPagos.jsp
+$(document).ready(function(){
+    $.validator.addMethod("valueNotEquals", function(value, element, arg){
+        return arg !== value;
+       }, "Value must not equal arg.")
+
+    $('#pagForm').validate({
+        rules: {
+            txtfechaPago: {
+                required: true,               
+            },
+            txtMonto: "required",
+            txtMes: {
+            	valueNotEquals: "default",
+            },
+            txtAnio: "required",
+            txtCliente_rutcliente: {
+            	valueNotEquals: "default",
+            },
+        },
+        messages: {
+            txtfechaPago: {
+                required: "Este es un campo obligatorio.",
+            },
+            txtMonto: "Este es un campo obligatorio.",
+            txtMes: {
+            	valueNotEquals: "Este es un campo obligatorio.",
+            },         
+            txtAnio: "Este es un campo obligatorio.",
+            txtCliente_rutcliente: {
+            	valueNotEquals: "Este es un campo obligatorio.",
+            },
         }
     });
 });

@@ -38,26 +38,26 @@
 	            
 	            <h2 id="titulo-editarcliente">Editar Cliente</h2>
 	            <label for="" id="label-editarcliente">Rut</label>
-	            <input type="text" id="input-editarcliente" name="txtrutCliente" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/>/>
+	            <input type="text" id="input-editarcliente" name="txtrutCliente" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/>
 	            <label for="" id="label-editarcliente">Nombres</label>
-	            <input type="date" id="input-editarcliente" name="txtcliNombres" value='<c:out value="${cli.getCliNombres()}"/>'/>/>
+	            <input type="date" id="input-editarcliente" name="txtcliNombres" value='<c:out value="${cli.getCliNombres()}"/>'/>
 	            <label for="" id="label-listarvisita">Apellidos</label>
-	            <input type="time" id="txtvishora" name="txtcliApellidos" value='<c:out value="${cli.getCliApellidos()}"/>'/>/>
+	            <input type="time" id="txtvishora" name="txtcliApellidos" value='<c:out value="${cli.getCliApellidos()}"/>'/>
 	            <label for="" id="label-listarvisita">Teléfono</label>
-	            <input type="time" id="listarvisita" name="txtcliTelefono" value='<c:out value="${cli.getCliTelefono()}"/>'/>/>
+	            <input type="time" id="listarvisita" name="txtcliTelefono" value='<c:out value="${cli.getCliTelefono()}"/>'/>
 	            <label for="" id="label-listarvisita">AFP</label>
-	            <input type="time" id="listarvisita" name="txtcliAfp" value='<c:out value="${cli.getCliAfp()}"/>'/>/>
+	            <input type="time" id="listarvisita" name="txtcliAfp" value='<c:out value="${cli.getCliAfp()}"/>'/>
 	            <label for="" id="label-listarvisita">Sistema de salud</label>
 	            <select id="input-listarvisita" name="txtcliSistemaSalud">
 	                <option value="Fonasa">Fonasa</option>
 	                <option value="Isapre">Isapre</option>
 	            </select>
 	            <label for="" id="label-listarvisita">Direccion</label>
-	            <input type="time" id="listarvisita" name="txtcliDireccion" value='<c:out value="${cli.getCliDireccion()}"/>'/>/>
+	            <input type="time" id="listarvisita" name="txtcliDireccion" value='<c:out value="${cli.getCliDireccion()}"/>'/>
 	            <label for="" id="label-listarvisita">Comuna</label>
-	            <input type="time" id="listarvisita" name="txtcliComuna" value='<c:out value="${cli.getCliComuna()}"/>'/>/>
+	            <input type="time" id="listarvisita" name="txtcliComuna" value='<c:out value="${cli.getCliComuna()}"/>'/>
 	            <label for="" id="label-listarvisita">Edad</label>
-	            <input type="time" id="listarvisita" name="txtcliEdad" value='<c:out value="${cli.getCliEdad()}"/>'/>/>
+	            <input type="time" id="listarvisita" name="txtcliEdad" value='<c:out value="${cli.getCliEdad()}"/>'/>
 	
 	            <tr style="display:none">
 	                <td>Run Usuario</td>

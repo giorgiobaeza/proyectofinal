@@ -39,18 +39,18 @@
     
     
     <div class="contenedor-crearpagos">
-        <form id="crearpagos" method="post" action="crearpagos" class="cmxform" id="pagForm">
+        <form id="crearpagos" method="post" action="crearPagosProcesar" class="cmxform" id="pagForm">
             
             <h2 id="titulo-crearpagos">Crear Pagos</h2>
             <label for="" id="label-crear-capacitacion">ID pagos</label>
-            <input type="text" id="label-crearpagos" name="txtidPagos" value='<c:out value="${nid}"/>'/>
+            <input type="text" id="label-crearpagos" name="txtidPagos" value='<c:out value="${nid}"/>' readonly="readonly"/>
             <label for="" id="label-crearpagos">Fecha de pago</label>
             <input type="date" id="label-crearpagos" name="txtfechaPago"/>
             <label for="" id="label-crearpagos">Monto de pago</label>
             <input type="text" id="label-crearpagos" name="txtMonto"/>
             <label for="" id="label-crearpagos">Mes de pago</label>
             <select id="input-crearpagos" name="txtMes">
-                <option>Seleccione una opción</option>
+                <option value="default">Seleccione una opción</option>
                 <option value="enero">Enero</option>
                 <option value="febrero">Febrero</option>
                 <option value="marzo">Marzo</option>
@@ -68,6 +68,7 @@
             <input type="text" id="label-crearpagos" name="txtAnio"/>
             <label for="" id="label-crearpagos">Rut cliente</label>
             <select id="input-crearpagos" name="txtCliente_rutcliente">
+            	<option value="default">Seleccione una opción</option>
                 <c:forEach items="${lcli}" var="lc">
                     <option value='<c:out value="${lc.getRutCliente()}" />'><c:out value="${lc.getRutCliente()}" /></option>
                 </c:forEach>
