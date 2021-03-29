@@ -25,6 +25,8 @@
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>Listar Usuarios</a></li>
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarPagos'>Listar pagos</a></li>
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/contacto'>Contacto</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/logout'>Logout</a></li>
+                
             </ul>
         </nav>
         <div class="wave-2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"

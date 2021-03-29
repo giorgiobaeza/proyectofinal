@@ -11,7 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,200;1,300;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">   
     <title>Listar Visita</title>
-
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src='<c:out value="${pageContext.request.contextPath}"/>/resources/js/script.js'></script>
     <link href='<c:out value="${pageContext.request.contextPath}"/>/resources/CSS/estilos.css' rel="stylesheet">
 </head>
 
@@ -25,6 +28,7 @@
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarVisitas'>Listar Visitas</a></li>
                  <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarDetalleChequeo'>Respoder Checklist</a></li>
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/contacto'>Contacto</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/logout'>Logout</a></li>
             </ul>
         </nav>
         <div class="wave-2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
@@ -53,50 +57,36 @@
 	 	            <td><c:out value="${lv.getCliente_rutcliente()}" /></td>
 	            
 	            <td>
-					<a href='<c:out value="${pageContext.request.contextPath}"/>/editarCliente/<c:out value="${lu.getRun()}"/>'>
-						<button>Editar</button>
+					<a href='<c:out value="${pageContext.request.contextPath}"/>/listarDetalleChequeo/<c:out value="${lv.getIdvisita()}"/>'>
+						<button>Chequeos</button>
 					</a>							
 				</td>
 				</tr>
 			</c:forEach>
     	</table>
-        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/crearVisita'>
-        	<table>
-        		<tr Style="display:none">
-        			<td>Id Visita</td>
-        			<td><input type="text" name="txtidvisita" id="txtidvisita" value='<c:out value="${nid}"/>'/></td>
-        		</tr>
-        		<tr>
-        			<td>Fecha</td>
-        			<td><input type="date"  name="txtvisfecha" id="txtvisfecha"/></td>
-        		</tr>
-        		<tr>
-        			<td>Hora</td>
-        			<td><input type="text" name="txtvishora" id="txtvishora"/></td>
-        		</tr>
-        		<tr>
-        			<td>Lugar</td>
-        			<td><input type="text" name="txtvislugar" id="txtvislugar"/></td>
-        		</tr>
-        		<tr>
-        			<td>Comentario</td>
-        			<td><input type="text" name="txtviscomentarios" id="txtviscomentarios"/></td>
-        		</tr>
-        		<tr>
-        			<td>Rut cliente</td>
-					<td>
-                    	<select name="txtrutcliente">
-	            			<c:forEach items="${rutclie}" var="rc">
-                    			<option value='<c:out value="${rc.getRutCliente()}" />'><c:out value="${rc.getRutCliente()}"/></option>
-                    		</c:forEach>
-                    	</select>
-                    </td>        		
-                </tr>
-        		<tr>
-        			<td><input type="submit" value="Crear Visita"/></td>
-        		</tr>
-        	</table>
-        </form>
+    <div class="contenedor-listarvisita">
+	        <form id="listarvisita" method="post" action="listarvisita" class="cmxform" id="visForm">
+	            
+	            <h2 id="titulo-listarvisita">Listar Visitas</h2>
+	            <label id="label-listarvisita">ID Visita</label>
+	            <input type="text" id="input-listarvisita" name="txtidvisita"/>
+	            <label id="label-listarvisita">Fecha de pago</label>
+	            <input type="date" id="input-listarvisita" name="txtvisfecha" placeholder="Fecha de pago" />
+	            <label id="label-listarvisita">Hora</label>
+	            <input type="time" id="txtvishora" name="txtMonto"/>
+	            <label id="label-listarvisita">Lugar</label>
+	            <input type="time" id="listarvisita" name="txtvislugar"/>
+	            <label id="label-listarvisitas">Comentario</label>
+	            <input type="time" id="input-listarvisita" name="txtviscomentarios"/>
+	            <label id="label-listarvisita">Rut Cliente</label>
+	            <select id="input-listarvisita" name="txtrutcliente">
+	                <c:forEach items="${rutclie}" var="lc">
+	                    <option value='<c:out value="${lc.getRutCliente()}" />'><c:out value="${lc.getRutCliente()}" /></option>
+	                </c:forEach>
+	            </select>
+	            <input type="submit" id="botonlistarvisita" value="Crear Visita">
+	        </form>
+    </div>
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>

@@ -38,7 +38,7 @@ public class ClienteControlador {
 		@RequestParam ("txtcliApellidos") String cliApellidos,
 		@RequestParam ("txtcliTelefono") String cliTelefono,
 		@RequestParam ("txtcliAfp") String cliAfp,
-		@RequestParam ("txtcliSistemaSalud") String cliSistemaSalud,
+		@RequestParam ("txtcliSistemaSalud") int cliSistemaSalud,
 		@RequestParam ("txtcliDireccion") String cliDireccion,
 		@RequestParam ("txtcliComuna") String cliComuna,
 		@RequestParam ("txtcliEdad") int cliEdad,

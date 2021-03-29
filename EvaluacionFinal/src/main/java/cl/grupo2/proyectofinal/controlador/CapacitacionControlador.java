@@ -1,5 +1,7 @@
 package cl.grupo2.proyectofinal.controlador;
 
+import java.time.OffsetTime;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,8 +45,8 @@ public class CapacitacionControlador {
 	@RequestMapping(value="/crearCapacitacionProcesar", method = RequestMethod.POST)
 	public String crearCapacitaciones(Model model,
 		@RequestParam ("idcapacitacion") int idCapacitacion,
-		@RequestParam ("capfecha") String capFecha,
-		@RequestParam ("caphora") String capHora,
+		@RequestParam ("capfecha") Date capFecha,
+		@RequestParam ("caphora") OffsetTime capHora,
 		@RequestParam ("caplugar") String capLugar,
 		@RequestParam ("capduracion") int capDuracion,
 		@RequestParam ("cliente_rutcliente") int cliente_RutCliente ) {

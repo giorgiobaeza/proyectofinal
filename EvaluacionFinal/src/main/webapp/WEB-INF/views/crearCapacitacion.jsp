@@ -36,7 +36,7 @@
         
     </header>
     <div class="contenedor-crear-capacitacion">
-        <form id="contenedor-crear-capacitacion" method="post" action="contenedor-crear-capacitacion" class="cmxform" id="pagForm">
+        <form id="contenedor-crear-capacitacion" method="post" action="crearCapacitacionProcesar" class="cmxform" id="pagForm">
             
             <h2 id="contenedor-crear-capacitacion">Crear Capacitación</h2>
             <label for="" id="label-crear-capacitacion">ID capacitación</label>

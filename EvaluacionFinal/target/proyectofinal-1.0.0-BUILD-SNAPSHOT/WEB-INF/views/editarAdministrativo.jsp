@@ -11,12 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,200;1,300;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">   
     <title>Editar Administrativo</title>
+    <script src="https://kit.fontawesome.com/1d5353b7f3.js" crossorigin="anonymous"></script>
 
     <link href='<c:out value="${pageContext.request.contextPath}"/>/resources/CSS/estilos.css' rel="stylesheet">
 </head>
 
 <body>
     <header class="header-2">
+    
         <input type="checkbox" id="btn-menu">
         <label for="btn-menu" ><i class="fas fa-bars"></i></label>
         <nav>
@@ -26,6 +28,8 @@
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>Listar Usuarios</a></li>
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarPagos'>Listar pagos</a></li>
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/contacto'>Contacto</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/logout'>Logout</a></li>
+                
             </ul>
         </nav>
         <div class="wave-2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
@@ -35,44 +39,24 @@
         </svg></div>
         
     </header>
-    <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/procesarEditarAdministrativo' class="cmxform" id="capForm">
-            <table class="cel- tablas-t tablas-e">
-                <tr>
-                	<td>Rut Administrativo</td>
-                	<td><input type="text" name="txtrutadministrativo" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
-                </tr>
-                <tr>
-                    <td>Nombres</td>
-                    <td><input type="text" name="txtadmnombres" value='<c:out value="${adm.getNombres()}"/>'/></td>
-                </tr>
-                <tr>
-                    <td>Apellidos</td>
-                    <td><input type="text" name="txtadmapellidos" value='<c:out value="${adm.getApellidos()}"/>'/></td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td><input type="text" name="txtadmafp" value='<c:out value="${adm.getEmail()}"/>'/></td>
-                </tr>
-				<tr>
-                    <td>Area</td>
-                    <td><input type="text" name="txtadmsistemasalud" value='<c:out value="${adm.getArea()}"/>'/></td>
-                </tr>
-				<tr style="display:none">
-                    <td>Run Usuario</td>
-                    <td><input type="text" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
-                </tr>
-                <tr>
-					<td><input type="submit" value="Ingresar Administrativo"></td>
-					<td>
-						<a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>
-							<button type="button">Volver</button>
-						</a>
-					</td>
-				</tr>
-                </table>
+    <div class="contenedor-editardministrativo">
+        <form id="editaradministrativo" method="post" action="editaradministrativo" class="cmxform" id="pagForm">
+            
+            <h2 id="titulo-editaradministrativo">Editar Administrativo</h2>
+            <label for="" id="label-editaradministrativo">Rut Administrativo</label>
+            <input type="text" id="input-editardministrativo" name="txtrutadministrativo" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/>
+            <label for="" id="label-editaradministrativo">Nombres</label>
+            <input type="text" id="input-editaradministrativo" name="txtadmnombres" value='<c:out value="${adm.getNombres()}"/>'/>
+            <label for="" id="label-editaradministrativo">Apellidos</label>
+            <input type="text" id="input-editaradministrativo" name="txtadmapellidos" value='<c:out value="${adm.getApellidos()}"/>'/>
+            <label for="" id="label-editaradministrativos">Afp</label>
+            <input type="text" id="input-editaradministrativo" name="txtadmafp" value='<c:out value="${adm.getEmail()}"/>'/>
+            <label for="" id="label-editaradministrativos">Sistema de Salud</label>
+            <input type="text" id="input-editaradministrativo" name="txtadmsistemasalud" value='<c:out value="${adm.getArea()}"/>'/>
+			<input style="display:none" type="text" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/>
+            <input type="submit" id="botonceditaradministrativo" value="Editar Usuario">
         </form>
-    </fieldset>
+    </div>
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>

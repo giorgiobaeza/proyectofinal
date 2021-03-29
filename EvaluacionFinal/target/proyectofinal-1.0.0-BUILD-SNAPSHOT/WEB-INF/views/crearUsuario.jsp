@@ -11,7 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,200;1,300;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">   
     <title>Crear Usuario</title>
-
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src='<c:out value="${pageContext.request.contextPath}"/>/resources/js/script.js'></script>
     <link href='<c:out value="${pageContext.request.contextPath}"/>/resources/CSS/estilos.css' rel="stylesheet">
 </head>
 
@@ -26,6 +29,8 @@
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>Listar Usuarios</a></li>
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarPagos'>Listar pagos</a></li>
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/contacto'>Contacto</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/logout'>Logout</a></li>
+                
             </ul>
         </nav>
         <div class="wave-2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
@@ -35,41 +40,29 @@
         </svg></div>
         
     </header>
-        <form method="get" action="crearUsuarioProcesar" class="cmxform" id="capForm">
-            <table class="cel- tablas-t tablas-e">
-                <tr>
-                	<td>Nombre</td>
-                	<td><input type="text" name="usnombre" id="usnombre"/></td>
-                </tr>
-                <tr>
-                    <td>Apellido</td>
-                    <td><input type="text" name="usapellido" id="usapellido"/></td>
-                </tr>
-                <tr>
-                    <td>Fecha de Nacimiento</td>
-                    <td><input type="text" name="usfecha" id="usfecha"/></td>
-                </tr>
-                <tr>
-                    <td>R.U.N.</td>
-                    <td><input type="text" name="usrun" id="usrun"/></td>
-                </tr>
-                <tr>
-                    <td>Tipo de Usuario</td>
-                    <td>
-                    	<select name="tipousuario">
-                    		<option>seleccione una opción</option>
-                    		<option value="cliente">Cliente</option>
-                    		<option value="profesional">Profesional</option>
-                    		<option value="administrativo">Administrativo</option>
-                    	</select>
-                    </td>
-                </tr>
-				<tr>
-				<tr>
-					<td><input type="submit" value="Ingresar Usuario"></td>
-				</tr>
-                </table>
-        </form>
+	    <div class="contenedor-crearusuario">
+	        <form  method="post" action="crearUsuarioProcesar" class="cmxform" id="usrForm">
+	            
+	            <h2 id="titulo-crearusuario">Crear Usuario</h2>
+	            <label for="" id="label-crearusuario">Nombre</label>
+	            <input type="text" id="input-crearusuario" name="usnombre"/>
+	            <label for="" id="label-crearusuario">Apellido</label>
+	            <input type="text" id="input-crearusuario" name="usapellido"/>
+	            <label for="" id="label-crearusuario">Fecha de nacimiento</label>
+	            <input type="date" id="input-crearusuario" name="usfecha"/>
+	            <label for="" id="label-crearusuario">RUT</label>
+	            <input type="text" id="input-crearusuario" name="usrun"/>
+	            <label for="" id="label-crearusuario">Tipo de usuario</label>
+	            <select id="input-crearusuario" name="tipousuario">
+  	                <option value="default">Seleccionar una opción</option>
+	                <option value="cliente">Cliente</option>
+	                <option value="profesional">Profesional</option>
+	                <option value="administrativo">Administrativo</option>
+	            </select>
+	
+	            <input type="submit" id="botoncrearusuario" value="Ingresar Usuario">
+	        </form>
+    </div>
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>

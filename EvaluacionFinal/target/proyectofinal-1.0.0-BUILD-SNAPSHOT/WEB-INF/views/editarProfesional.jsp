@@ -26,6 +26,8 @@
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>Listar Usuarios</a></li>
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/listarPagos'>Listar pagos</a></li>
                 <li><a href='<c:out value="${pageContext.request.contextPath}"/>/contacto'>Contacto</a></li>
+                <li><a href='<c:out value="${pageContext.request.contextPath}"/>/logout'>Logout</a></li>
+                
             </ul>
         </nav>
         <div class="wave-2" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
@@ -35,48 +37,33 @@
         </svg></div>
         
     </header>
-    <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="POST" action='<c:out value="${pageContext.request.contextPath}"/>/procesarEditarProfesional' class="cmxform" id="capForm">
-            <table class="cel- tablas-t tablas-e">
-                <tr>
-                	<td>Rut Profesional</td>
-                	<td><input type="text" name="txtrutprofesional" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
-                </tr>
-                <tr>
-                    <td>Nombres</td>
-                    <td><input type="text" name="txtpronombres" value='<c:out value="${pro.getNombres()}"/>'/></td>
-                </tr>
-                <tr>
-                    <td>Apellidos</td>
-                    <td><input type="text" name="txtproapellidos" value='<c:out value="${pro.getApellidos()}"/>'/></td>
-                </tr>
-                <tr>
-                    <td>Teléfono</td>
-                    <td><input type="text" name="txtprotelefono" value='<c:out value="${pro.getTelefono()}"/>'/></td>
-                </tr>
-                <tr>
-                    <td>Título Profesional</td>
-                    <td><input type="text" name="txtprotitulo" value='<c:out value="${pro.getTituloprofesional()}"/>'/></td>
-                </tr>
-				<tr>
-                    <td>Proyecto</td>
-                    <td><input type="text" name="txtproproyecto" value='<c:out value="${pro.getProyecto()}"/>'/></td>
-                </tr>
-				<tr style="display:none">
-                    <td>Run Usuario</td>
-                    <td><input type="text" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/></td>
-                </tr>
-                <tr>
-					<td><input type="submit" value="Ingresar Profesional"></td>
-					<td>
-						<a href='<c:out value="${pageContext.request.contextPath}"/>/listarUsuarios'>
-							<button type="button">Volver</button>
-						</a>
-					</td>
-				</tr>
-                </table>
+    
+        <div class="contenedor-editarprofesional">
+        <form id="editarprofesional" method="post" action="procesarEditarProfesional" class="cmxform" id="pagForm">
+            
+            <h2 id="titulo-editarprofesional">Editar Profesional</h2>
+            <label for="" id="label-editarprofesional">Rut Profesional</label>
+            <input type="text" id="input-editarprofesional" name="txtrutprofesional" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/>/>
+            <label for="" id="label-editarprofesional">Nombres</label>
+            <input type="text" id="input-editarprofesional" name="txtpronombres" value='<c:out value="${pro.getNombres()}"/>'/>/>
+            <label for="" id="label-editarprofesional">Apellidos</label>
+            <input type="text" id="input-editarprofesional" name="txtproapellidos" value='<c:out value="${pro.getApellidos()}"/>'/>/>
+            <label for="" id="label-editarprofesional">Teléfono</label>
+            <input type="text" id="input-editarprofesional" name="txtprotelefono" value='<c:out value="${pro.getTelefono()}"/>'/>/>
+            <label for="" id="label-editarprofesional">Título profesional</label>
+            <input type="text" id="input-editarprofesional" name="txtprotitulo" value='<c:out value="${pro.getTituloprofesional()}"/>'/>/>
+            <label for="" id="label-editarprofesional">Proyecto</label>
+            <input type="text" id="input-editarprofesional" name="txtproproyecto" value='<c:out value="${pro.getProyecto()}"/>'/>/>
+            <label for="" id="label-editarprofesional">RUT</label>
+            <input type="text" id="input-editarprofesional" name="txtusuariorun" value='<c:out value="${usr.getRun()}"/>' readonly="readonly"/>/>
+
+
+
+            <input type="submit" id="botoneditarprofesional" value="Ingresar Profesional">
+
         </form>
-    </fieldset>
+    	</div>
+
     <footer>
         <div class="siguenos">
             <h2>Siguenos en nuestras redes sociales</h2>

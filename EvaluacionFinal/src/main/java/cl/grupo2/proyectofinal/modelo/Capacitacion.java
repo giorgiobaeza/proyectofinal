@@ -1,15 +1,25 @@
 package cl.grupo2.proyectofinal.modelo;
 
+import java.time.OffsetTime;
+import java.util.Date;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Capacitacion {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int idCapacitacion;
-	private String capFecha;
-	private String capHora;
+	@Temporal(TemporalType.DATE)
+	private Date capFecha;
+	@Temporal(TemporalType.TIME)
+	private OffsetTime capHora;
 	private String capLugar;
 	private int capDuracion;
 	private int cliente_RutCliente;
@@ -18,7 +28,7 @@ public class Capacitacion {
 		super();
 	}
 
-	public Capacitacion(int idCapacitacion, String capFecha, String capHora, String capLugar, int capDuracion,
+	public Capacitacion(int idCapacitacion, Date capFecha, OffsetTime capHora, String capLugar, int capDuracion,
 			int cliente_RutCliente) {
 		super();
 		this.idCapacitacion = idCapacitacion;
@@ -37,19 +47,19 @@ public class Capacitacion {
 		this.idCapacitacion = idCapacitacion;
 	}
 
-	public String getCapFecha() {
+	public Date getCapFecha() {
 		return capFecha;
 	}
 
-	public void setCapFecha(String capFecha) {
+	public void setCapFecha(Date capFecha) {
 		this.capFecha = capFecha;
 	}
 
-	public String getCapHora() {
+	public OffsetTime getCapHora() {
 		return capHora;
 	}
 
-	public void setCapHora(String capHora) {
+	public void setCapHora(OffsetTime capHora) {
 		this.capHora = capHora;
 	}
 
